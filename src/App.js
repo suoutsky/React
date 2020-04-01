@@ -16,6 +16,12 @@ import ForwardRefApi from './view/V16.3/forwardRef-api';
 import Memo from './view/v16.6/memo';
 import Lazysuspense from './view/v16.6/lazysuspense';
 import DerivedStateFromError from './view/v16.6/derivedStateFromError';
+// react-hooks
+import StateDemo from './view/react-hooks/1-basic/01-state';
+import EffectDemo from './view/react-hooks/1-basic/02-effect';
+import LifeCycleDemo from './view/react-hooks/2-migration/01-life-cycle';
+// react-redux
+import ReduxDemo from './view/redux';
 
 function App() {
   return (
@@ -61,7 +67,21 @@ function App() {
               <li>
                 <Link to="/derivedStateFromError">derivedStateFromError-api</Link>
               </li>
-              
+            </ul>
+            <div className="title">react-hooks</div>
+            <ul>
+              <li>
+                <Link to="/stateDemo">StateDemo</Link>
+              </li>
+              <li>
+                <Link to="/effectDemo">EffectDemo</Link>
+              </li>
+              <li>
+                <Link to="/lifeCycleDemo">LifeCycleDemo</Link>
+              </li>
+              <li>
+                <Link to="/reduxDemo">ReduxDemo</Link>
+              </li>
             </ul>
           </div>
           <div className="content">
@@ -74,6 +94,10 @@ function App() {
             <Route exact path="/memo" component={Memo} />
             <Route exact path="/lazysuspense" component={Lazysuspense} />
             <Route exact path="/derivedStateFromError" component={DerivedStateFromError} />
+            <Route exact path="/stateDemo" component={StateDemo} />
+            <Route exact path="/effectDemo" component={EffectDemo} />
+            <Route exact path="/lifeCycleDemo" component={LifeCycleDemo} />
+            <Route exact path="/reduxDemo" component={ReduxDemo} />
           </div>
         </div>
       </Router>

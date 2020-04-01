@@ -1,0 +1,2736 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="layout" content="test"/>
+    <meta charset="utf-8">
+    <title>乐刻运动注册活动专区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <link rel="stylesheet" href="/ecam/css/bxsilder.css">
+    <link rel="stylesheet" href="/ecam/js/weui/weui.2.1.3.css">
+    <style>
+    .qr_code_pc_outer {
+        display: none;
+        position: fixed;
+        left: 0px;
+        top: 20px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1024px) {
+        .qr_code_pc_outer {
+            display: block;
+        }
+    }
+
+    .qr_code_pc_inner {
+        position: relative;
+        width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .qr_code_pc {
+        position: absolute;
+        right: -160px;
+        top: 0;
+        padding: 10px;
+        border: 1px solid #d9dadc;
+        background-color: #fff;
+    }
+
+    @media only screen and (min-width: 1024px) {
+        #_cl-page-preview {
+            width: 600px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    .div_disabled {
+        background: #ddd;
+        border: 1px solid #ddd;
+    }
+
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small,
+    strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+    }
+
+    a {
+        color: #108ee9;
+        text-decoration: none;
+    }
+
+    .empty-img {
+        display: none;
+        opacity: 0;
+    }
+
+    #clSubmitForm, #clGetCodeBtn {
+        cursor: pointer;
+    }
+
+    #_cl_messageArea {
+        text-align: center;
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    #frame_wp {
+        box-sizing: border-box;
+        width: 580px;
+        min-height: 100vh;
+        margin: 0 auto;
+        max-width: 100%;
+        box-shadow: rgb(178, 192, 191) 0 24px 59px;
+    }
+    .topic {
+            font-size:14px;
+            line-height: 20px;
+            padding: 5px;
+            color: #6e6b6b;
+            font-weight: 600;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+    .topic span {
+        background: #91c8d0;
+        color: #fff;
+        margin-right: 5px;
+        line-height: 1;
+        padding: 0 8px;
+    }
+    .answer {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 5px;
+        word-wrap: break-word;
+       word-break: break-all;
+    }
+    .answer span {
+        color: #ff1560;
+        line-height: 1;
+        font-weight: bold;
+    }
+    .analysis {
+        font-size: 13px;
+        line-height: 20px;
+        padding: 5px;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+    .analysis span {
+        color: #ff1560;
+        line-height: 1;
+        font-weight: bold;
+    }
+    .opt-analysis {
+        margin: 0 0 10 0;
+        padding: 10;
+        font-size: 15px;
+        color: #91c8d0;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    .analysis-content {
+        width: 100%;
+        display: none;
+        position: relative;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background: #fff;
+    }
+    .opt-analysis img {
+        float: right;
+        margin-top: 3px;
+        width: 22px;
+        height: 8px;
+    }
+    #frame_wp .module{
+        display: none;
+    }
+    #frame_wp .basics_form fieldset{
+        display: none;
+    }
+    #frame_wp .nearby-coupons-card{
+        display: none;
+    }
+    #frame_wp [data-nearbychange]{
+        display: none;
+    }
+
+    .hide-date-edit-field::-webkit-datetime-edit-month-field,
+    .hide-date-edit-field::-webkit-datetime-edit-day-field,
+    .hide-date-edit-field::-webkit-datetime-edit-year-field,
+    .hide-date-edit-field::-webkit-datetime-edit-hour-field,
+    .hide-date-edit-field::-webkit-datetime-edit-minute-field,
+    .hide-date-edit-field::-webkit-datetime-edit-ampm-field,
+    .hide-date-edit-field::-webkit-datetime-edit-text {
+        display: none;
+    }
+
+    .form-submitted-show-module + .module {
+        display: none;
+    }
+
+    .formGhost, .cl-tpl-form-toolbar, .cl-tpl-item-toolbar {
+        display: none;
+    }
+
+    img {
+        max-width: 100%;
+        vertical-align: middle;
+    }
+
+    .cl-tpl-item-divider {
+        border-style: solid;
+        box-sizing: border-box;
+    }
+
+    .cl-tpl-item-content p {
+        word-wrap: break-word;
+        -webkit-margin-after: 0px;
+        -webkit-margin-before: 0px;
+    }
+
+    body {
+        margin: 0px;
+        overflow-x: hidden;
+        padding: 0;
+        font-family: "Microsoft Yahei", Helvetica, sans-serif;
+    }
+
+    form input {
+        font-size: 18px;
+    }
+
+    #_cl-page-preview {
+        min-height: 100vh !important;
+    }
+    .display-none{
+        display: none !important;
+    }
+    .cash-card, .coupon-claim-after, .coupon-claim-message, .coupon-claim-message {
+        display: none;
+    }
+
+    /*//卡券样式*/
+    .intocenter_width {
+        width: 100%;
+        padding: 10px 0;
+        word-break: break-all;
+        background: #fff;
+    }
+
+    .intocenter_maxwidth {
+        max-width: 414px;
+        margin: 0 auto;
+    }
+
+    .intocenter_main {
+        width: 90%;
+        margin: 0 auto;
+        background: #fff;
+        -moz-border-radius: 6px 8px 8px 6px;
+        -webkit-border-radius: 6px 8px 8px 6px;
+        border-radius: 6px 8px 8px 6px;
+        -webkit-box-shadow: #999 0px 0px 5px;
+        -moz-box-shadow: #999 0px 0px 5px;
+        box-shadow: #999 0px 0px 5px;
+    }
+
+    .intocenter_con {
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    .intocenter_text {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 20px;
+        line-height: 30px;
+    }
+
+    .intocenter_button {
+        background: #bc0001;
+        width: 70%;
+        font-size: 18px;
+        line-height: 34px;
+        margin: 0 auto;
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+    }
+
+    .intocenter_button a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    /*消息提示框样式*/
+    .coupon-claim-message {
+        position: fixed;
+        display: inline-block;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        height: 22%;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.75);
+        -moz-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.65);
+        -webkit-box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.65);
+        box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.65);
+        border-radius: 10px;
+    }
+
+    .message-ctn {
+        width: 100%;
+        margin-top: 35px;
+    }
+
+    .message-btn {
+        width: 80%;
+        color: white;
+        background-color: rgb(230, 78, 97);
+        border-radius: 10px;
+        margin: 0 auto;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .filter {
+        filter: blur(3px);
+        -moz-filter: blur(3px);
+        -ms-filter: blur(3px);
+        -o-filter: blur(3px);
+        -webkit-filter: blur(3px);
+    }
+
+    /*支付成功*/
+    .success {
+        width: 100%;
+        /*background: #f4f4f4;*/
+        overflow: hidden;
+    }
+    .pay-success-image{
+        display: none;
+    }
+
+    .success_con {
+        padding: 15px 0;
+        background: #fff;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        -webkit-box-pack: center;
+        margin-bottom: 10px;
+        border-bottom: 8px solid #ddd;
+    }
+
+    .success_infor {
+        -webkit-box-flex: 0;
+    }
+
+    .success_text {
+        font-size: 18px;
+        line-height: 30px;
+        color: #666;
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .success_tips {
+        color: #3cca3f;
+        text-indent: 40px;
+        font-size: 24px;
+        line-height: 30px;
+        background: url(//cdn.convertlab.com/image/897c5b33bdb74301a9459f97d7d14af4) left center no-repeat;
+        background-size: 20%;
+    }
+    div[data-pagetype]{
+        display:none;
+    }
+    div[data-pagetype="page"]{
+        display: block;
+    }
+    .Wrights_no{
+        padding:20px 0;
+    }
+    .Wrights_no p{
+        display:inline;
+    }
+    .Wrights_no_width{
+        background:#fff;
+        border-radius:10px;
+        padding:40px 20px;
+        width:90%;
+        margin:0 auto;
+        box-sizing:border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-shadow:0px 0px 20px rgba(0,0,0,0.19);
+        -webkit-box-shadow:0px 0px 20px rgba(0,0,0,0.19);
+        -moz-box-shadow:0px 0px 20px rgba(0,0,0,0.19);
+    }
+    .Wrights_no_Con{
+        width:90%;
+        margin:0 auto;
+    }
+    .Wrights_no_Ico{
+        width:50px;
+        height:50px;
+        background:#ee9859;
+        margin:0 auto;
+        margin-bottom:10px;
+    }
+    .Wrights_no_Ico div img{
+        width:100%;
+        height:100%;
+    }
+    .Wrights_no_Tips{
+        text-align:center;
+        font-size:16px;
+        color:#333;
+        line-height:1.5;
+        margin-bottom:10px;
+    }
+    @media screen and (max-width: 375px) {
+        .Wrights_no_Code{
+            font-size:20px;
+        }
+        .Wrights_no_Ico{
+            width:45px;
+            height:45px;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        .Wrights_no_Ico{
+            width:40px;
+            height:40px;
+        }
+        .Wrights_no_width{
+            padding:30px 10px;
+        }
+        .Wrights_no_Tips{
+            font-size:14px;
+        }
+    }
+    #clSubmitFormOneClick {
+        width: 60%;
+        height: 34px;
+        color: #fff;
+        font-size: 16px;
+        -moz-border-radius: 2px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        -webkit-appearance: none;
+        text-align: center;
+        line-height: 34px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    #clSubmitFormOneClick.disabled {
+        border-color: #ddd;
+        background: #ddd;
+    }
+    #clSubmitForm.submit-button.disabled {
+        border-color: #ddd;
+        background: #ddd;
+    }
+    .poster-backgroundImg {
+      	background: #000000;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+        display: none;
+        top: 0;
+        bottom: 0;
+        z-index: 10;
+    }
+    .poster-backgroundImg  .poster-img{
+        width: auto;
+        height: auto;
+        margin: auto;
+        top: 50%;
+        max-width: 100%;
+        max-height: 100%;
+        transform: translateY(-50%);
+        position: relative;
+    }
+    .poster-close-img {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1;
+        width: 30px;
+        height: 30px;
+    }
+
+    .page_popup_mask.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(250, 250, 250, 0.6);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Lantinghei SC", "Microsoft Sans Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        -ms-overflow-style: scrollbar;
+        text-rendering: optimizeLegibility;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+    .page_popup_mask.active .page_popup_container {
+        position: absolute;
+        top: 47%;
+        left: 50%;
+        flex-direction: column;
+        margin: auto;
+        width: 88vw;
+        max-height: 82vh;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+    }
+    .page_popup_mask.active .page_popup_close {
+        width: 28px;
+        height: 28px;
+        background-image: url(/ecam/img/icon_close.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: 16px;
+        align-self: flex-end;
+    }
+    .page_popup_mask.active .page_popup_content {
+        width: 100%;
+        max-height: calc(82vh - 45px);
+        outline: none;
+        border: 1px solid #eee;
+        background-color: #fff;
+        box-shadow: #666 0 0 20px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    [data-button-type=mail],[data-button-type=coupon],[data-button-type=otherCoupon],
+    [data-button-type=phdjCoupon]{
+        background:#fa0;
+    }
+    .poster-buttom-button {
+      position: fixed;
+      display: none;
+      bottom: 0;
+      width: 100%;
+      padding: 10%;
+      box-sizing: border-box;
+	}
+    .poster-share-button {
+        width: 80%;
+        padding: 10px;
+        color: #fff;
+        border-radius: 34px;
+        font-size: 16px;
+        background: linear-gradient( #66aaff, #66aaff), linear-gradient( #16b3e6, #4faee9);
+        box-shadow: 0 0 3px #70cbcb;
+        margin: 0 auto;
+      }
+    .poster-dowload-button {
+      width: 80%;
+      padding: 10px;
+      color: #fff;
+      font-size: 16px;
+      background: linear-gradient(
+          #66aaff,
+          #66aaff),
+        linear-gradient(
+          #fe5741,
+          #fe5741);
+      box-shadow: 0 0 3px #e5f7f7;
+      margin: 20px auto;
+      }
+      .poster-buttom-sharebutton {
+        display: none;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: #fff;
+        height: 160px;
+        padding: 15px;
+        box-sizing: border-box;
+      }
+    .poster-buttom-sharebutton .poster-share-sharetimeline,.poster-share-appmessage{
+			height: 70px;
+      padding: 30px;
+		}
+		.poster-buttom-sharebutton .post-share-close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 15px;
+			height: 15px;
+			padding: 10px 15px;
+		}
+
+      @media screen and (min-width: 400px){
+       .weui-dialog {
+        width: 370px;
+        margin: 0 auto;
+       }
+      }
+    </style>
+    <link rel="stylesheet" href="/ecam/css/protocol.css">
+    <script type="text/javascript" src="/ecam/js/jquery-3.3.1.min.js"></script>
+    <script>
+        window.globalVariable = {};
+    </script>
+</head>
+
+<body>
+<div id="preview" style="width:100%;text-align:center;margin:10px;color:red;display:none;">您已进入页面预览模式</div>
+
+<div style="width:100%;">
+    
+        <div id="frame_wp" style="padding: 0px; background-color: rgb(255, 255, 255);">
+          <div class="page_popup_mask">
+            <div class="page_popup_container">
+            <div class="page_popup_close"></div>
+              <div class="page_popup_content">
+                <div class="module section146 holiday08_titleA" data-module="holiday08_titleA" width="100%" data-type="TITLE" data-themecolor="#f5d1a1" data-btncolor="#f5d1a1" data-labelcolor="#f5d1a1" data-pagetype="page" id="section146" style="position: relative;"><div class="content">
+                    <style themecolor="" style="padding: 0px; background-color: rgb(255, 255, 255);">
+	  		.Wholiday08_titleA{
+		  		background:#b62e22;
+		  		width:100%;
+	  		}
+	  		.Wholiday08_titleAbg01{
+		 		 background:url(https://ecam.spdb.com.cn/ecam/template/image/holiday08_mainbg.png) top left repeat;
+	  		}
+	  		.Wholiday08_titleAbg02{
+		  		background: url(https://ecam.spdb.com.cn/ecam/template/image/holiday08_titlebg1.png) center center no-repeat;
+		  		background-size:100%;
+		  		padding:10px 0;
+	  		}
+	  		.Wholiday08_titleAwidth{
+		  		width:90%;
+		  		margin:0 auto;
+	 	 	}
+			.Wholiday08_titleAcon{
+				text-align:center;
+			}
+			.Wholiday08_titleAText{
+				display:inline-block;
+			}
+			.Wholiday08_titleAWord{
+				float:left;
+				margin-right:10px;
+			}
+			.Wholiday08_titleAspell{
+				color:#f5d1a1;
+				text-align:center;
+				font-size:16px;
+				margin-bottom:8px;
+			}
+			.Wholiday08_titleAChinese{
+				border:1px solid #000;
+				background:#f5d1a1;
+				color:#b62e22;
+				font-size:18px;
+				display:inline-block;
+				padding:0 2px 2px 0;
+			}
+			.Wholiday08_titleAChinese div{
+				border:1px solid #000;
+				background:#f5d1a1;
+				margin:-4px 0 0 -4px;
+				padding:5px 8px;
+			}
+			@media screen and (max-width: 320px) {
+				.Wholiday08_titleAWord{
+					margin-right:5px;
+				}
+				.Wholiday08_titleAChinese{
+					font-size:16px;
+				}
+				.Wholiday08_titleAspell{
+					font-size:14px;
+				}
+			}
+		</style>
+        	<div data-background-color="" class="Wholiday08_titleA">
+          	<div class="Wholiday08_titleAbg01">
+            	<div data-background-image="" class="Wholiday08_titleAbg02">
+                	<div class="Wholiday08_titleAwidth">
+                    	<div class="Wholiday08_titleAcon">
+                        	<div class="Wholiday08_titleAText">
+                            	<div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div data-select="" data-editor="" class="Wholiday08_titleAspell" role="textbox"><p>bian</p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>变<br></p></div></div>
+                                </div>
+                                <div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>shou<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>瘦</p></div></div>
+                                </div>
+                                
+                                
+                            <div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>bian<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>变<br></p></div></div>
+                                </div><div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>mei<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>美<br></p></div></div>
+                                </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div></div><div class="module section621 holiday08_titleA" data-module="holiday08_titleA" width="100%" data-type="TITLE" data-themecolor="#f5d1a1" data-btncolor="#f5d1a1" data-labelcolor="#f5d1a1" data-pagetype="page" id="section621" style="position: relative;"><div class="content">
+          <style themecolor="" style="padding: 0px; background-color: rgb(255, 255, 255);">
+	  		.Wholiday08_titleA{
+		  		background:#b62e22;
+		  		width:100%;
+	  		}
+	  		.Wholiday08_titleAbg01{
+		 		 background:url(https://ecam.spdb.com.cn/ecam/template/image/holiday08_mainbg.png) top left repeat;
+	  		}
+	  		.Wholiday08_titleAbg02{
+		  		background: url(https://ecam.spdb.com.cn/ecam/template/image/holiday08_titlebg1.png) center center no-repeat;
+		  		background-size:100%;
+		  		padding:10px 0;
+	  		}
+	  		.Wholiday08_titleAwidth{
+		  		width:90%;
+		  		margin:0 auto;
+	 	 	}
+			.Wholiday08_titleAcon{
+				text-align:center;
+			}
+			.Wholiday08_titleAText{
+				display:inline-block;
+			}
+			.Wholiday08_titleAWord{
+				float:left;
+				margin-right:10px;
+			}
+			.Wholiday08_titleAspell{
+				color:#f5d1a1;
+				text-align:center;
+				font-size:16px;
+				margin-bottom:8px;
+			}
+			.Wholiday08_titleAChinese{
+				border:1px solid #000;
+				background:#f5d1a1;
+				color:#b62e22;
+				font-size:18px;
+				display:inline-block;
+				padding:0 2px 2px 0;
+			}
+			.Wholiday08_titleAChinese div{
+				border:1px solid #000;
+				background:#f5d1a1;
+				margin:-4px 0 0 -4px;
+				padding:5px 8px;
+			}
+			@media screen and (max-width: 320px) {
+				.Wholiday08_titleAWord{
+					margin-right:5px;
+				}
+				.Wholiday08_titleAChinese{
+					font-size:16px;
+				}
+				.Wholiday08_titleAspell{
+					font-size:14px;
+				}
+			}
+		</style>
+        	<div data-background-color="" class="Wholiday08_titleA">
+          	<div class="Wholiday08_titleAbg01">
+            	<div data-background-image="" class="Wholiday08_titleAbg02">
+                	<div class="Wholiday08_titleAwidth">
+                    	<div class="Wholiday08_titleAcon">
+                        	<div class="Wholiday08_titleAText">
+                            	<div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div data-select="" data-editor="" class="Wholiday08_titleAspell" role="textbox"><p>hui<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>回<br></p></div></div>
+                                </div>
+                                <div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>jia<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>家<br></p></div></div>
+                                </div>
+                                
+                                
+                            <div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>guo<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>过<br></p></div></div>
+                                </div><div data-add-block="" class="Wholiday08_titleAWord">
+                                	<div class="Wholiday08_titleAspell" data-select="" data-editor="" role="textbox"><p>nian<br></p></div>
+                                    <div class="Wholiday08_titleAChinese"><div data-select="" data-editor="" class="" role="textbox"><p>年<br></p></div></div>
+                                </div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div></div><div class="module section528" data-module="register_short_form_white" width="100%" data-type="REGISTER" data-themecolor="#2eb2ed" data-btncolor="#2eb2ed" data-labelcolor="#2eb2ed" data-pagetype="page" id="section528" style="position: relative;"><div class="content"><style>.register_short_form_white {
+  background: #ffffff;
+  padding: 20px 0;
+}
+.register_short_form_white *:after,
+.register_short_form_white *:before {
+  box-sizing: border-box;
+}
+.register_short_form_white textarea {
+  resize: vertical;
+}
+.register_short_form_white .container {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0 15px;
+}
+.register_short_form_white .field-block {
+  margin: 10px 0 20px 0;
+  position: relative;
+  clear: both;
+}
+#frame .register_short_form_white .field-block:not(.frame-static):hover {
+  outline: 1px dashed #ccc;
+  cursor: move;
+}
+#frame .register_short_form_white .field-block:not(.frame-static):hover:after {
+  background-color: rgba(46, 178, 237, 0.3);
+}
+#frame .register_short_form_white .field-block:after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+}
+.register_short_form_white .field-block .field-content {
+  display: block;
+  overflow: hidden;
+}
+.register_short_form_white .field-block .field-content > div:first-child:nth-last-child(2) .select,
+.register_short_form_white .field-block .field-content > div:nth-child(2):last-child .select {
+  min-width: 50%;
+}
+.register_short_form_white .field-block .title-line {
+  margin-bottom: 5px;
+}
+.register_short_form_white .field-block .title-line .title-text {
+  color: #2eb2ed;
+  font-size: 16px;
+  display: inline-block;
+  word-break: break-all;
+  word-break: break-word;
+}
+.register_short_form_white .field-block.asterisk:before {
+  content: "*";
+  position: absolute;
+  left: -15px;
+  color: #ff5a54;
+  top: 0;
+  font-size: 15px;
+}
+.register_short_form_white .field-block .desc {
+  color: #9a9a9a;
+  font-size: 14px;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+.register_short_form_white .field-block .code-field {
+  margin-top: 10px;
+  display: block;
+}
+.register_short_form_white .options-container {
+  background: #fff;
+  width: 100%;
+  height: 34px;
+  overflow: hidden;
+  border: solid 1px #dcdcdc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  position: relative;
+  box-sizing: border-box;
+}
+.register_short_form_white .options-container:after {
+  content: "";
+  position: absolute;
+  border: 3px solid #2eb2ed;
+  transform: rotate(45deg) translate(-50%);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  margin-left: -15px;
+  top: 50%;
+  margin-top: -3px;
+}
+.register_short_form_white .options-container .option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: #444;
+  width: 100%;
+  height: 32px;
+  font-size: 14px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  outline: none;
+  text-indent: 10px;
+}
+.register_short_form_white .options-container .option option {
+  color: initial;
+}
+.register_short_form_white .options:focus {
+  border-color: #0fc3fe;
+}
+.register_short_form_white .options-container:focus {
+  border-color: #0fc3fe;
+}
+.register_short_form_white .text-input {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border: 1px solid #dcdcdc;
+  background: #fff;
+  height: 34px;
+  line-height: 1.5;
+  width: 100%;
+  font-size: 14px;
+  color: #444;
+  appearance: button;
+  -moz-appearance: button;
+  -webkit-appearance: button;
+  box-sizing: border-box;
+  outline: none;
+  padding: 10px 5px 10px 10px;
+}
+.register_short_form_white .text-input:focus {
+  border-color: #0fc3fe;
+}
+.register_short_form_white textarea.text-input {
+  min-height: 75px;
+}
+.register_short_form_white input[type=date]:before,
+.register_short_form_white input[type=datetime-local]:before {
+  content: attr(placeholder);
+}
+.register_short_form_white .select {
+  display: inline-block;
+  margin: 5px 0;
+  float: left;
+  min-width: 100%;
+  position: relative;
+}
+.register_short_form_white .select .option-image {
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+.register_short_form_white .select .option-image .option-label {
+  float: none;
+  font-size: 14px;
+  line-height: 24px;
+  color: #fff;
+  padding: 3%;
+  word-break: break-all;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  box-sizing: border-box;
+  right: 0;
+}
+.register_short_form_white .select .option-image img {
+  width: 100%;
+  max-height: 100%;
+}
+.register_short_form_white .select .option-label {
+  font-size: 14px;
+  float: left;
+  box-sizing: border-box;
+  margin-left: 25px;
+}
+.register_short_form_white .select .option-label p {
+  display: inline-block;
+}
+.register_short_form_white .select .other-input {
+  float: left;
+  margin-left: 5px;
+  margin-top: -7px;
+}
+.register_short_form_white .select .checkbox {
+  display: none;
+  width: 0;
+}
+.register_short_form_white .select .checkbox:checked + .checkboxInput:after {
+  content: "";
+  width: 7px;
+  height: 10px;
+  position: absolute;
+  border: 2px solid #fff;
+  transform: rotate(45deg);
+  border-top-color: transparent;
+  border-left-color: transparent;
+  margin-top: -1px;
+  margin-left: 2px;
+}
+.register_short_form_white .select .checkbox:checked + .checkboxInput:before {
+  content: "";
+  background: #2eb2ed;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+}
+.register_short_form_white .select .checkboxInput {
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  display: inline-block;
+  height: 14px;
+  margin-top: 2px;
+  vertical-align: top;
+  width: 14px;
+  margin-right: 10px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+}
+.register_short_form_white .select .checkbox:checked + .option-image:before {
+  content: "";
+  position: absolute;
+  border-color: #2eb2ed #2eb2ed transparent transparent;
+  border-width: 15px;
+  border-style: solid;
+  right: 0;
+  top: 0;
+}
+.register_short_form_white .select .checkbox:checked + .option-image:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 0;
+  color: #234bf8;
+  border: 3px solid;
+  width: 7px;
+  height: 15px;
+  transform: rotate(45deg);
+  border-color: transparent #fff #fff transparent;
+}
+.register_short_form_white .select .checkbox:checked + .option-image img {
+  outline: 3px solid #2eb2ed;
+  box-shadow: 0px 0px 10px #2eb2ed;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.register_short_form_white .select .radio {
+  display: none;
+}
+.register_short_form_white .select .radioInput {
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-radius: 100%;
+  display: block;
+  height: 14px;
+  margin-right: 10px;
+  margin-top: 2px;
+  vertical-align: top;
+  width: 14px;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  box-sizing: border-box;
+}
+.register_short_form_white .select .radio:checked + .radioInput:after {
+  border: 1px solid rgba(46, 178, 237, 0.1);
+  background: #2eb2ed;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 8px;
+  width: 8px;
+  margin: 2px 0 0 2px;
+  box-sizing: border-box;
+}
+.register_short_form_white .select .radio:checked + .option-image:before {
+  content: "";
+  position: absolute;
+  border-color: #2eb2ed #2eb2ed transparent transparent;
+  border-width: 15px;
+  border-style: solid;
+  right: 0;
+  top: 0;
+}
+.register_short_form_white .select .radio:checked + .option-image:after {
+  content: "";
+  position: absolute;
+  right: 4px;
+  top: 0;
+  color: #234bf8;
+  border: 3px solid;
+  width: 7px;
+  height: 15px;
+  transform: rotate(45deg);
+  border-color: transparent #fff #fff transparent;
+}
+.register_short_form_white .select .radio:checked + .option-image img {
+  outline: 3px solid #2eb2ed;
+  box-shadow: 0px 0px 10px #2eb2ed;
+  filter: alpha(opacity=70);
+  -moz-opacity: 0.7;
+  opacity: 0.7;
+}
+.register_short_form_white .tel-input {
+  vertical-align: middle;
+  -moz-border-radius: 2px 0 0 2px;
+  -webkit-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border: 1px solid #dcdcdc;
+  border-right: 0px;
+  background: #fff;
+  height: 34px;
+  width: 60%;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+  appearance: button;
+  -moz-appearance: button;
+  -webkit-appearance: button;
+  box-sizing: border-box;
+  padding: 10px 5px 10px 10px;
+}
+.register_short_form_white .code-submit-button {
+  width: 40%;
+  background: #2eb2ed;
+  height: 34px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 30px;
+  border: 1px solid #2eb2ed;
+  -moz-border-radius: 0 2px 2px 0;
+  -webkit-border-radius: 0 2px 2px 0;
+  border-radius: 0 2px 2px 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border-right: 3px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+.register_short_form_white .code-submit-button:disabled {
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
+  cursor: not-allowed;
+}
+.register_short_form_white .submit-button {
+  display: block;
+  width: 60%;
+  background: #2eb2ed;
+  height: 34px;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #2eb2ed;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  text-align: center;
+  line-height: 34px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.register_short_form_white .submit-button:disabled {
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
+  cursor: not-allowed;
+}
+.register_short_form_white .hidden-field {
+  visibility: visible;
+  position: relative;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.register_short_form_white .hidden-field:before {
+  content: "\f023";
+  position: absolute;
+  left: -15px;
+  color: #ff5a54;
+  top: 4px;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+.register_short_form_white .hidden-field.asterisk:after {
+  top: 15px;
+}
+#preview + div #frame_wp .register_short_form_white .hidden-field {
+  visibility: hidden;
+  position: absolute;
+}
+.register_short_form_white .rate.rating-container {
+  position: relative;
+  z-index: 0;
+  height: 22.5px;
+  padding: 0;
+  margin: 0;
+  word-spacing: -4px;
+  overflow: hidden;
+}
+.register_short_form_white .rate.rating-container polygon {
+  stroke: #ffffff;
+  fill: #2eb2ed;
+}
+.register_short_form_white .rate input {
+  width: 30px;
+  height: 22.5px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+.register_short_form_white .rate input:first-child {
+  display: none;
+}
+.register_short_form_white .rate input:checked ~ .star polygon {
+  fill: #ffffff;
+  stroke: #2eb2ed;
+}
+.register_short_form_white .rate input:checked + .star polygon {
+  stroke: #ffffff;
+  fill: #2eb2ed;
+}
+.register_short_form_white .rate .star {
+  position: absolute;
+  display: inline-block;
+  margin-left: -30px;
+  width: 30px;
+  height: 22.5px;
+  z-index: -1;
+}
+.register_short_form_white .rate .star polygon {
+  stroke: #ffffff;
+  fill: #2eb2ed;
+}
+.register_short_form_white .sortable-placeholder {
+  background-color: rgba(46, 178, 237, 0.3);
+}
+#frame .register_short_form_white .frame-hide-submit-button {
+  display: none;
+}
+@media screen and (max-width: 375px) {
+  .register_short_form_white .rate input {
+    width: 24px;
+  }
+  .register_short_form_white .rate .star {
+    margin-left: -24px;
+    width: 24px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .register_short_form_white .tel-input {
+    width: 60%;
+    height: 34px;
+  }
+  .register_short_form_white .code-submit-button {
+    width: 40%;
+    height: 34px;
+  }
+  .register_short_form_white .options-container {
+    width: 100%;
+    padding: 3px 0 2px 0;
+  }
+  .register_short_form_white .rate input {
+    width: 15px;
+  }
+  .register_short_form_white .rate .star {
+    margin-left: -15px;
+    width: 15px;
+  }
+}
+.register_short_form_white .field-block {
+  margin: 10px 0 20px 0;
+}
+.register_short_form_white .field-block .title-line .title-text {
+  color: #2eb2ed;
+}
+.register_short_form_white .submit-button {
+  display: block;
+  background: #2eb2ed;
+  border: 1px solid #2eb2ed;
+}
+.register_short_form_white .code-submit-button {
+  background: #2eb2ed;
+  border: 1px solid #2eb2ed;
+}
+</style><form  method="post"  data-background-color="true" data-background-image="true" style="background: none 0% 0% repeat scroll rgb(182, 46, 34);"><div><div class="container"><fieldset id="registerFieldSet"><div class="field-block asterisk"><input type="text" name="name" placeholder="姓名" class="undefined text-input" value=""><div class="desc"><p></p></div></div><div class="field-block asterisk"><input type="tel" name="mobile" placeholder="手机号码" class="text-input" id="registerMobileField"><div class="code-field"><input type="tel" class="tel-input" name="code" maxlength="4"><button type="button" class="code-submit-button" id="registerGetCodeBtn">发送验证码</button></div><div></div><div class="desc"><p></p></div></div><div><input id="registerFieldCheckbox1" type="checkbox"><span>&nbsp;我已阅读并同意&nbsp;</span><span id="formFieldProtocal1" style="color: rgb(58, 180, 226);">会员服务说明</span></div><div class="field-block frame-static"><div></div><div class="field-content"><button type="button" id="clSubmitRegister" class="submit-button">提交</button></div></div></fieldset><fieldset id="registerFieldOneClick" style="display: none;"><div class="field-block frame-static"><div></div><div class="field-content"><button type="button" id="clSubmitRegisterOneClick" class="submit-button">一键注册</button></div></div><div style="width: 100%; display: inline-block; text-align: center;"><input id="registerFieldCheckbox2" type="checkbox"><span>&nbsp;我已阅读并同意&nbsp;</span><span id="formFieldProtocal2" style="color: rgb(58, 180, 226);">会员服务说明</span></div></fieldset><fieldset id="logInApp" style="display: none;"><div class="field-block frame-static"><div></div><div class="field-content"><button type="button" id="clSubmitLogInApp" class="submit-button">注册</button></div></div></fieldset></div></div></form></div></div><div class="module section773 phdjcode" data-module="phdjcode" width="100%" data-type="PHDJCODE" data-pagetype="page" id="section773" style="position: relative;"><div class="content">
+                <style>
+                    .div_phdj {
+                        display: flex;
+                        font-size: 12px;
+                        padding: 12px 0px;
+                        color: rgba(0, 0, 0, 0.65);
+                        width: 90%;
+                        margin: 0 auto;
+                        max-width: 414px;
+                    }
+
+                    .div_phdj_info {
+                        width: calc(70% - 16px);
+                        padding: 16px;
+                        position: relative;
+                        box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.09);
+                        background-color: white;
+                        border-radius: 2px;
+                    }
+
+                    .div_phdj_info p{
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_info_title {
+                        font-size: 16px;
+                    }
+
+                    .div_phdj_conter {
+                        display: flex;
+                        width: 8px;
+                        position: relative;
+                        background-color: white
+                    }
+
+                    .phdj_conter_one {
+                        width: 8px;
+                        background-color: white;
+                        position: relative;
+                    }
+
+                    .phdj_conter_two {
+                        width: 8px;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                    }
+
+                    .phdj_info_type {
+                        border: 1px solid rgb(82, 154, 237);
+                        border-radius: 2px;
+                        text-align: center;
+                        font-size: 12px;
+                        display:inline-block;
+                        padding: 2px 8px;
+                        margin-top: 8px;
+                        color: #808695;
+                        max-width: 90%;
+                    }
+                    .phdj_info_type p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                    }
+
+                    .cro_left_top,
+                    .cro_right_top,
+                    .cro_left_bottom,
+                    .cro_right_bottom {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        z-index: 1;
+                        background: white;
+                    }
+
+                    .cro_right_top {
+                        top: -1px;
+                        right: -1px;
+                        border-radius: 0px 0px 0px 12px;
+                        border-bottom: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_right_bottom_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        right: -8px;
+                        bottom: 0px;
+                        border-radius: 16px 16px 0px 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+                        border-top: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_top_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        border-radius: 0px 0px 16px 16px;
+                        right: -8px;
+                        top: 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px 2px 8px rgba(0, 0, 1, 0.1);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_bottom {
+                        right: -1px;
+                        bottom: -1px;
+                        border-radius: 12px 0px 0px 0px;
+                        border-top: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_left_top {
+                        top: 0px;
+                        left: -1px;
+                        border-radius: 0px 0px 12px 0px;
+                    }
+
+                    .cro_left_bottom {
+                        left: -1px;
+                        bottom: 0px;
+                        border-radius: 0px 12px 0px 0px;
+                    }
+
+                    .div_phdj_open {
+                        width: 30%;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                        text-align: center;
+                        color: white;
+                        padding-top: 8px;
+                        border-radius: 2px;
+                        box-shadow: 6px 1px 8px rgba(0, 0, 0, 0.09);
+                    }
+
+                    .phdj_open_money,.phdj_open_money p {
+                        font-size: 14px !important;
+                        font-weight: 500 !important;
+                        padding: 0 2px;
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_open_info,.phdj_open_info p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                        padding: 0 2px;
+                    }
+
+                    .phdj_open_submit {
+                        width: 56px;
+                        margin-left: calc((100% - 56px)/2);
+                        border-radius: 0px 2px 2px 0px;
+                        margin-top: 8px;
+                        background-color: white;
+                        color: rgba(85, 157, 237, 0.9)
+                    }
+                </style>
+                <div data-background-image="" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;">
+                    <div class="div_phdj phdjCoupon" data-coupons="phdj" data-code="5050">
+                        <div class="div_phdj_info">
+                            <div class="phdj_info_title" data-select="" data-editor="" role="textbox"><p>一重礼：乐刻APP20元优惠券</p></div>
+                            <p class="phdj_info_type" data-select="" data-editor="" role="textbox">新注册用户专享</p>
+                        </div>
+                        <div class="div_phdj_conter">
+                            <div class="cro_right_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_right_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                        </div>
+                        <div class="div_phdj_open clPhdjCoupon">
+                            <div class="cro_left_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_left_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="phdj_open_money">
+                                <span data-select="" data-editor="" class="" role="textbox"><p>￥20.00</p></span>
+                            </div>
+                            <div data-select="" data-editor="" class="phdj_open_info" role="textbox"><p><br></p></div>
+                            <div class="phdj_open_submit">立即领取</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div><div class="module section225 phdjcode" data-module="phdjcode" width="100%" data-type="PHDJCODE" data-pagetype="page" id="section225" style="position: relative;"><div class="content">
+                <style>
+                    .div_phdj {
+                        display: flex;
+                        font-size: 12px;
+                        padding: 12px 0px;
+                        color: rgba(0, 0, 0, 0.65);
+                        width: 90%;
+                        margin: 0 auto;
+                        max-width: 414px;
+                    }
+
+                    .div_phdj_info {
+                        width: calc(70% - 16px);
+                        padding: 16px;
+                        position: relative;
+                        box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.09);
+                        background-color: white;
+                        border-radius: 2px;
+                    }
+
+                    .div_phdj_info p{
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_info_title {
+                        font-size: 16px;
+                    }
+
+                    .div_phdj_conter {
+                        display: flex;
+                        width: 8px;
+                        position: relative;
+                        background-color: white
+                    }
+
+                    .phdj_conter_one {
+                        width: 8px;
+                        background-color: white;
+                        position: relative;
+                    }
+
+                    .phdj_conter_two {
+                        width: 8px;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                    }
+
+                    .phdj_info_type {
+                        border: 1px solid rgb(82, 154, 237);
+                        border-radius: 2px;
+                        text-align: center;
+                        font-size: 12px;
+                        display:inline-block;
+                        padding: 2px 8px;
+                        margin-top: 8px;
+                        color: #808695;
+                        max-width: 90%;
+                    }
+                    .phdj_info_type p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                    }
+
+                    .cro_left_top,
+                    .cro_right_top,
+                    .cro_left_bottom,
+                    .cro_right_bottom {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        z-index: 1;
+                        background: white;
+                    }
+
+                    .cro_right_top {
+                        top: -1px;
+                        right: -1px;
+                        border-radius: 0px 0px 0px 12px;
+                        border-bottom: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_right_bottom_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        right: -8px;
+                        bottom: 0px;
+                        border-radius: 16px 16px 0px 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+                        border-top: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_top_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        border-radius: 0px 0px 16px 16px;
+                        right: -8px;
+                        top: 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px 2px 8px rgba(0, 0, 1, 0.1);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_bottom {
+                        right: -1px;
+                        bottom: -1px;
+                        border-radius: 12px 0px 0px 0px;
+                        border-top: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_left_top {
+                        top: 0px;
+                        left: -1px;
+                        border-radius: 0px 0px 12px 0px;
+                    }
+
+                    .cro_left_bottom {
+                        left: -1px;
+                        bottom: 0px;
+                        border-radius: 0px 12px 0px 0px;
+                    }
+
+                    .div_phdj_open {
+                        width: 30%;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                        text-align: center;
+                        color: white;
+                        padding-top: 8px;
+                        border-radius: 2px;
+                        box-shadow: 6px 1px 8px rgba(0, 0, 0, 0.09);
+                    }
+
+                    .phdj_open_money,.phdj_open_money p {
+                        font-size: 14px !important;
+                        font-weight: 500 !important;
+                        padding: 0 2px;
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_open_info,.phdj_open_info p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                        padding: 0 2px;
+                    }
+
+                    .phdj_open_submit {
+                        width: 56px;
+                        margin-left: calc((100% - 56px)/2);
+                        border-radius: 0px 2px 2px 0px;
+                        margin-top: 8px;
+                        background-color: white;
+                        color: rgba(85, 157, 237, 0.9)
+                    }
+                </style>
+                <div data-background-image="" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;">
+                    <div class="div_phdj phdjCoupon" data-coupons="phdj" data-code="">
+                        <div class="div_phdj_info">
+                            <div class="phdj_info_title" data-select="" data-editor="" role="textbox"><p>一重礼：乐刻APP20元优惠券</p></div>
+                            <p class="phdj_info_type" data-select="" data-editor="" role="textbox">新注册用户专享</p>
+                        </div>
+                        <div class="div_phdj_conter">
+                            <div class="cro_right_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_right_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                        </div>
+                        <div class="div_phdj_open clPhdjCoupon">
+                            <div class="cro_left_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_left_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="phdj_open_money">
+                                <span data-select="" data-editor="" class="" role="textbox"><p>￥20.00</p></span>
+                            </div>
+                            <div data-select="" data-editor="" class="phdj_open_info" role="textbox"><p><br></p></div>
+                            <div class="phdj_open_submit">立即领取</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div><div class="module section323 button_green" data-module="button_green" width="100%" data-type="BUTTON" data-themecolor="#7cca89" data-btncolor="#7cca89" data-labelcolor="#7cca89" data-pagetype="page" id="section323" style="position: relative;"><div class="content">
+	  	<style>
+		.Lineframe_button_green_background{
+			background:#fff;
+		}
+		.Lineframe_button_green_width{
+			width:80%;
+			margin:0 auto;
+			padding:20px 0 40px 0;
+		}
+		.Lineframe_button_green{
+			background:none;
+			color:#333;
+			text-align:center;
+			-moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+			border:1px solid #7cca89;
+			padding:5px;
+		}
+		.Lineframe_button_green_soild .colour{
+			background:#7cca89;
+			color:#fff;
+			-moz-border-radius:5px;
+            -webkit-border-radius:5px;
+            border-radius:5px;
+			font-size:16px;
+			line-height:40px;
+			height:40px;
+			text-decoration: none;
+			display:block;
+			overflow:hidden;
+		}
+		.Lineframe_button_green_soild div a{
+			text-decoration:none;
+			display:block;
+			width:100%;
+		}
+	  	</style>
+        <div data-background-image="" data-background-color="" class="Lineframe_button_green_background" style="background: rgb(186, 46, 34);">
+        <div class="Lineframe_button_green_width">
+        	<div class="Lineframe_button_green">
+            	<div data-select="" data-editor="" class="Lineframe_button_green_soild" role="textbox"><div class="colour"><p><a href="https://a.app.qq.com/o/simple.jsp?pkgname=com.baoli.blzj&amp;g_f=undefined#opened" class="cl-link-untracked " target="_blank"><font size="5"><b style="color: rgb(255, 255, 255);">点击下载浦惠到家</b></font></a></p></div></div>
+            </div>
+         </div>
+        </div>
+      </div></div><div class="module section207 phdjcode" data-module="phdjcode" width="100%" data-type="PHDJCODE" data-pagetype="page" id="section207" style="position: relative;"><div class="content">
+                <style>
+                    .div_phdj {
+                        display: flex;
+                        font-size: 12px;
+                        padding: 12px 0px;
+                        color: rgba(0, 0, 0, 0.65);
+                        width: 90%;
+                        margin: 0 auto;
+                        max-width: 414px;
+                    }
+
+                    .div_phdj_info {
+                        width: calc(70% - 16px);
+                        padding: 16px;
+                        position: relative;
+                        box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.09);
+                        background-color: white;
+                        border-radius: 2px;
+                    }
+
+                    .div_phdj_info p{
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_info_title {
+                        font-size: 16px;
+                    }
+
+                    .div_phdj_conter {
+                        display: flex;
+                        width: 8px;
+                        position: relative;
+                        background-color: white
+                    }
+
+                    .phdj_conter_one {
+                        width: 8px;
+                        background-color: white;
+                        position: relative;
+                    }
+
+                    .phdj_conter_two {
+                        width: 8px;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                    }
+
+                    .phdj_info_type {
+                        border: 1px solid rgb(82, 154, 237);
+                        border-radius: 2px;
+                        text-align: center;
+                        font-size: 12px;
+                        display:inline-block;
+                        padding: 2px 8px;
+                        margin-top: 8px;
+                        color: #808695;
+                        max-width: 90%;
+                    }
+                    .phdj_info_type p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                    }
+
+                    .cro_left_top,
+                    .cro_right_top,
+                    .cro_left_bottom,
+                    .cro_right_bottom {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        z-index: 1;
+                        background: white;
+                    }
+
+                    .cro_right_top {
+                        top: -1px;
+                        right: -1px;
+                        border-radius: 0px 0px 0px 12px;
+                        border-bottom: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_right_bottom_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        right: -8px;
+                        bottom: 0px;
+                        border-radius: 16px 16px 0px 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+                        border-top: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_top_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        border-radius: 0px 0px 16px 16px;
+                        right: -8px;
+                        top: 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px 2px 8px rgba(0, 0, 1, 0.1);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_bottom {
+                        right: -1px;
+                        bottom: -1px;
+                        border-radius: 12px 0px 0px 0px;
+                        border-top: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_left_top {
+                        top: 0px;
+                        left: -1px;
+                        border-radius: 0px 0px 12px 0px;
+                    }
+
+                    .cro_left_bottom {
+                        left: -1px;
+                        bottom: 0px;
+                        border-radius: 0px 12px 0px 0px;
+                    }
+
+                    .div_phdj_open {
+                        width: 30%;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                        text-align: center;
+                        color: white;
+                        padding-top: 8px;
+                        border-radius: 2px;
+                        box-shadow: 6px 1px 8px rgba(0, 0, 0, 0.09);
+                    }
+
+                    .phdj_open_money,.phdj_open_money p {
+                        font-size: 14px !important;
+                        font-weight: 500 !important;
+                        padding: 0 2px;
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_open_info,.phdj_open_info p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                        padding: 0 2px;
+                    }
+
+                    .phdj_open_submit {
+                        width: 56px;
+                        margin-left: calc((100% - 56px)/2);
+                        border-radius: 0px 2px 2px 0px;
+                        margin-top: 8px;
+                        background-color: white;
+                        color: rgba(85, 157, 237, 0.9)
+                    }
+                </style>
+                <div data-background-image="" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;">
+                    <div class="div_phdj phdjCoupon" data-coupons="phdj" data-code="">
+                        <div class="div_phdj_info">
+                            <div class="phdj_info_title" data-select="" data-editor="" role="textbox"><p>二重礼：乐刻APP30元优惠券</p></div>
+                            <p class="phdj_info_type" data-select="" data-editor="" role="textbox">达标用户专享</p>
+                        </div>
+                        <div class="div_phdj_conter">
+                            <div class="cro_right_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_right_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                        </div>
+                        <div class="div_phdj_open clPhdjCoupon">
+                            <div class="cro_left_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_left_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="phdj_open_money">
+                                <span data-select="" data-editor="" class="" role="textbox"><p>￥30.00</p></span>
+                            </div>
+                            <div data-select="" data-editor="" class="phdj_open_info" role="textbox"><p><br></p></div>
+                            <div class="phdj_open_submit">立即领取</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div><div class="module section979 phdjcode" data-module="phdjcode" width="100%" data-type="PHDJCODE" data-pagetype="page" id="section979" style="position: relative;"><div class="content">
+                <style>
+                    .div_phdj {
+                        display: flex;
+                        font-size: 12px;
+                        padding: 12px 0px;
+                        color: rgba(0, 0, 0, 0.65);
+                        width: 90%;
+                        margin: 0 auto;
+                        max-width: 414px;
+                    }
+
+                    .div_phdj_info {
+                        width: calc(70% - 16px);
+                        padding: 16px;
+                        position: relative;
+                        box-shadow: -2px 1px 8px rgba(0, 0, 0, 0.09);
+                        background-color: white;
+                        border-radius: 2px;
+                    }
+
+                    .div_phdj_info p{
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_info_title {
+                        font-size: 16px;
+                    }
+
+                    .div_phdj_conter {
+                        display: flex;
+                        width: 8px;
+                        position: relative;
+                        background-color: white
+                    }
+
+                    .phdj_conter_one {
+                        width: 8px;
+                        background-color: white;
+                        position: relative;
+                    }
+
+                    .phdj_conter_two {
+                        width: 8px;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                    }
+
+                    .phdj_info_type {
+                        border: 1px solid rgb(82, 154, 237);
+                        border-radius: 2px;
+                        text-align: center;
+                        font-size: 12px;
+                        display:inline-block;
+                        padding: 2px 8px;
+                        margin-top: 8px;
+                        color: #808695;
+                        max-width: 90%;
+                    }
+                    .phdj_info_type p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                    }
+
+                    .cro_left_top,
+                    .cro_right_top,
+                    .cro_left_bottom,
+                    .cro_right_bottom {
+                        position: absolute;
+                        width: 12px;
+                        height: 12px;
+                        z-index: 1;
+                        background: white;
+                    }
+
+                    .cro_right_top {
+                        top: -1px;
+                        right: -1px;
+                        border-radius: 0px 0px 0px 12px;
+                        border-bottom: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_right_bottom_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        right: -8px;
+                        bottom: 0px;
+                        border-radius: 16px 16px 0px 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.1);
+                        border-top: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_top_bg {
+                        position: absolute;
+                        width: 16px;
+                        height: 8px;
+                        border-radius: 0px 0px 16px 16px;
+                        right: -8px;
+                        top: 0px;
+                        background-color: white;
+                        z-index: 1;
+                        box-shadow: 0px 2px 8px rgba(0, 0, 1, 0.1);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+                        border-left: 1px solid rgba(0, 0, 0, 0.06);
+                    }
+
+                    .cro_right_bottom {
+                        right: -1px;
+                        bottom: -1px;
+                        border-radius: 12px 0px 0px 0px;
+                        border-top: 1px solid #f3f3f3;
+                        border-left: 1px solid #f3f3f3;
+                    }
+
+                    .cro_left_top {
+                        top: 0px;
+                        left: -1px;
+                        border-radius: 0px 0px 12px 0px;
+                    }
+
+                    .cro_left_bottom {
+                        left: -1px;
+                        bottom: 0px;
+                        border-radius: 0px 12px 0px 0px;
+                    }
+
+                    .div_phdj_open {
+                        width: 30%;
+                        background-color: rgba(85, 157, 237,1);
+                        position: relative;
+                        text-align: center;
+                        color: white;
+                        padding-top: 8px;
+                        border-radius: 2px;
+                        box-shadow: 6px 1px 8px rgba(0, 0, 0, 0.09);
+                    }
+
+                    .phdj_open_money,.phdj_open_money p {
+                        font-size: 14px !important;
+                        font-weight: 500 !important;
+                        padding: 0 2px;
+                        word-wrap: break-word;
+                    }
+
+                    .phdj_open_info,.phdj_open_info p{
+                        font-size: 12px !important;
+                        word-wrap: break-word;
+                        padding: 0 2px;
+                    }
+
+                    .phdj_open_submit {
+                        width: 56px;
+                        margin-left: calc((100% - 56px)/2);
+                        border-radius: 0px 2px 2px 0px;
+                        margin-top: 8px;
+                        background-color: white;
+                        color: rgba(85, 157, 237, 0.9)
+                    }
+                </style>
+                <div data-background-image="" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;">
+                    <div class="div_phdj phdjCoupon" data-coupons="phdj" data-code="">
+                        <div class="div_phdj_info">
+                            <div class="phdj_info_title" data-select="" data-editor="" role="textbox"><p>三重礼：天天领券</p></div>
+                            <p class="phdj_info_type" data-select="" data-editor="" role="textbox">浦惠到家用户专享</p>
+                        </div>
+                        <div class="div_phdj_conter">
+                            <div class="cro_right_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_right_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                        </div>
+                        <div class="div_phdj_open clPhdjCoupon">
+                            <div class="cro_left_top" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="cro_left_bottom" data-background-color="" style="background: rgb(186, 46, 34) none repeat scroll 0% 0%;"></div>
+                            <div class="phdj_open_money">
+                                <span data-select="" data-editor="" class="" role="textbox"><p><br></p></span>
+                            </div>
+                            <div data-select="" data-editor="" class="phdj_open_info" role="textbox"><p><br></p></div>
+                            <div class="phdj_open_submit">立即领取</div>
+                        </div>
+                    </div>
+                </div>
+            </div></div><div class="module section109 template09_activity" data-module="template09_activity" width="100%" data-type="TEXT" data-themecolor="#fde8ae" data-btncolor="#fde8ae" data-labelcolor="#fde8ae" data-pagetype="page" id="section109" style="position: relative;"><div class="content">
+      <style>
+	    .ypageTpl_template09_act{
+		  width:100%;
+	      margin:0 auto;
+	      background: #d92e37 ;
+	      overflow:hidden;
+	      color:#fde8ae;
+		  padding:0 0 20px 0;
+			}
+	     .ypageTpl_template09_acta{
+			  background: -webkit-linear-gradient(#ec563b,#d92e37); /* Safari 5.1 - 6.0 */
+              background: -o-linear-gradient(#ec563b,#d92e37); /* Opera 11.1 - 12.0 */
+              background: -moz-linear-gradient(#ec563b,#d92e37); /* Firefox 3.6 - 15 */
+              background: linear-gradient(#ec563b,#d92e37); /* 标准的语法（必须放在最后） */
+			 width:90%;
+			 margin:0 auto;
+			 -moz-box-shadow: 0px 0px 30px rgba(6, 0, 1, .30);
+            -webkit-box-shadow: 0px 0px 30px rgba(6, 0, 1, .30);
+            box-shadow: 0px 0px 30px rgba(6, 0, 1, .30);
+		    margin-top: 20px
+			 }
+		  .ypageTpl_template09_acttitle{
+			 width:90%;
+			 background:url(https://ecam.spdb.com.cn/ecam/template/image/template09_ico3.png) no-repeat center center;
+			 background-size:70%;
+			 margin:0 auto;
+			 text-align:center;
+			 font-size:20px;
+			 }
+		 .ypageTpl_template09_actti{
+			 padding:30px 0 20px 0;
+			 width:50%;
+			 margin:0 auto;
+			 text-align:center;
+			 }
+		  .ypageTpl_template09_actb{
+			  background:url(https://ecam.spdb.com.cn/ecam/template/image/template09_ico2.png) no-repeat bottom center;
+			 background-size:100%;
+			 width:100%;
+			  }
+			.ypageTpl_template09_acttext{
+				width:90%;
+				margin:0 auto;
+				padding-bottom:36px;
+				font-size: 14px;
+                line-height:1.5;
+				}
+	  </style>
+      <div data-background-color="" data-background-image="" class="ypageTpl_template09_act">
+        <div class="ypageTpl_template09_acta">
+           <div class="ypageTpl_template09_acttitle">
+             <div class="ypageTpl_template09_actti" data-select="" data-editor="" role="textbox"><p>活动规则</p></div>
+           </div>
+           <div class="ypageTpl_template09_actb">
+             <div data-select="" class="ypageTpl_template09_acttext">
+                <p data-editor="" class="" role="textbox">
+                        1）活动时间：2019年11月22日—2019年12月31日；<br>
+                        2）一重礼：扫描指定二维码新注册浦惠到家客户，可领取1张20元乐刻APP优惠券，客户使用该券可0元购买1张乐刻APP20元现金充值兑换码；优惠名额有限，先到先得；<br>3）优惠券有效期至2019年12月31日；兑换码激活有效期至2020年6月30日；</p><div><p>4）兑换码在“我的订单”中查看获取；</p>5）兑换码仅可激活一次，再次使用无效，兑换后权益立即生效，无使用期限；<br>6）充值现金可在乐刻APP消费，无使用门槛，不支持退换，不得转售，兑换码是否有效以商户核实为准；<br>7）兑换路径：搜索并关注微信公众号“乐刻运动杭州”，回复“兑换”，卡片来源选择“全国通用实体卡兑换/兑换码”，输入兑换码，即可激活，在乐刻运动app内使用；<br>8）在兑换码激活或使用过程中如有疑问，请联络：400-150-1866<br>
+                        9）本细则最终解释权归官方所有。
+                 </div><p></p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+</div>
+
+<div class="qr_code_pc_outer" style="">
+    <div class="qr_code_pc_inner">
+        <div class="qr_code_pc">
+            <img src="/qrimg/2ea7375710754e58965071f252a7f0f3" style="width: 120px;height:120px;display:block;margin: 0px auto;"/>
+
+            <p style="font-size:13px;width:105px;text-align:center;">扫一扫<br>手机浏览效果更佳</p>
+        </div>
+    </div>
+    <audio controls="controls" style="display: none;" id="audio"></audio>
+</div>
+
+
+<!-- 工龄海报 -->
+<div class="poster-backgroundImg">
+  <img class= "poster-img"/>
+  <img class= "poster-close-img" src="/ecam/img/icon_close.png">
+  <div class="poster-buttom-button">
+    <div class="poster-share-button">长按图片保存到手机</div>
+    <!-- <div class="poster-dowload-button">下载</div> -->
+  </div>
+</div>
+<div class='dialogs-tips'>
+  <div id='saveImage-tip' style="display:none;position: relative;z-index:7500;">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog">
+        <div class="weui-dialog__bd">长按保存图片，分享到朋友圈。</div>
+        <div class="weui-dialog__ft">
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+        </div>
+    </div>
+  </div>
+  <div id='loadingToast' style="display:none;position: relative;z-index:7500;">
+    <div class='weui-mask_transparent'></div>
+    <div class='weui-toast'>
+      <i class='weui-loading weui-icon_toast'></i>
+      <p class='weui-toast__content'>数据加载中</p>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript" src="/ecam/js/popMessage.js"></script>
+<script type="text/javascript" src="/ecam/js/utils/bxsilder.js"></script>
+<script type="text/javascript" src="/ecam/js/service.js"></script>
+<script type="text/javascript" src="/ecam/js/forms/form.js"></script>
+<script type="text/javascript" src="/ecam/js/forms/register.js"></script>
+<script type="text/javascript" src="/ecam/js/weui/weui.1.2.1.js"></script>
+<script src="//res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+<script>
+
+    var globalVariable = {
+        mobile: "eh7fJJ",
+        memberId: "XsFl",
+        isWechat: true,
+        wechatName: "券民公社",
+        wechatAccount: "162",
+        openid: "oAjHT1DIIImhCY0c-t2S3eZYRrLs",
+        pageUuid: "21e25c",
+        pageTag: "",
+        pageFormUuid: "",
+        pageName: "乐刻运动活动专区",
+        displaySetting: "{}",
+        refuuid: "",
+        campaignUuid: "21e25c",
+        shareUrl: "http://ecam.spdb.com.cn/ecam/page/6043643085191918721/21e25c?cl_md=42484&cl_sh=11867&from=singlemessage&isappinstalled=0",
+        pageFbShare: false,
+        preview:false,
+        pageMeta: "{\"displayConditions\":[{\"id\":\"section528\",\"display\":\"nonmember\"},{\"id\":\"section773\",\"display\":\"platformgroup\",\"taskId\":\"\",\"groupId\":\"42016\"},{\"id\":\"section225\",\"display\":\"nonmember\",\"taskId\":\"\",\"groupId\":\"\"},{\"id\":\"section207\",\"display\":\"all\"}],\"form\":{\"id\":\"\",\"uuid\":null,\"theme\":\"\",\"title\":\"\",\"fields\":[],\"btnText\":\"提交\",\"applyBtnText\":\"提交\",\"autoFill\":false,\"autoHide\":false,\"disableIdentity\":false,\"redirectText\":\"提交成功\",\"redirectType\":\"text\",\"submissionText\":\"\",\"redirectUrl\":\"\",\"redirectUuid\":null,\"targetGroup\":0,\"stage\":\"\",\"submitScore\":0,\"limitSubmit\":0,\"showLimitSubmit\":false,\"showMember\":false,\"showTask\":false,\"taskTitle\":\"\",\"taskPriority\":\"\",\"taskAssignee\":\"\",\"showFieldChooser\":false,\"actions\":[],\"replaceType\":\"FORM\",\"applicationForm\":true,\"sectionId\":\"\",\"isDrawCard\":false,\"cardId\":\"\",\"isCharge\":false,\"mobileOnly\":false,\"totalLimit\":-1,\"eachLimit\":1,\"groupId\":\"\",\"groupLimit\":false,\"version\":\"2.0\"},\"pages\":[{\"name\":\"主页\",\"id\":\"homepage\",\"modules\":[]}],\"register\":{\"id\":\"register_short_form_white\",\"theme\":\"\",\"title\":\"\",\"fields\":[],\"btnText\":\"提交\",\"autoFill\":false,\"autoHide\":false,\"disableIdentity\":false,\"sectionId\":\"\",\"mobileOnly\":false,\"appBtnText\":\"注册\"},\"fundEquity\":[{\"key\":\"\",\"code\":\"\",\"count\":\"\"}],\"luckyDraw\":{}}",
+        isPlatformMember: false,
+        isMerchantMember: false,
+        isNormalMerchant: false,
+        isApplied: false,
+        creditCardLink: "",
+        isPageMember: false,
+        isVerifyModuleLimitMember: false,
+        enableVerifyModule: false,
+        verifyTermAttributeList: [],
+        verifyModuleType: "none",
+        verifyModuleResult: false,
+        taskComplete: [],
+        platformGroupComplete: [{"verifyResult":true,"groupId":"42016"}],
+        verifyModuleData: "",
+        platformWechatQRUrl: "https://ebiz.spdb.com.cn/ebiz/webapp/api/WeChatQR.do",
+        pageType:"phdj_custom",
+        isApp: false
+    }
+    window.globalVariable = globalVariable;
+    if(!globalVariable.isNormalMerchant){
+        globalVariable.isMerchantMember=globalVariable.isPlatformMember;
+    }
+</script>
+<script src="/ecam/js/template.js"></script>
+<script src="https://ecol.spdb.com.cn/cbe/collect?tid=11867&timestamp=1576723370185&at=0"></script>
+</body>
+</html>
+
+<div class="user-protocol-mask">
+    <div class="user-protocol-popup">
+        <div class="user-protocol-title platform">用户注册协议</div>
+        <div class="user-protocol-title merchant">商户会员注册协议</div>
+        <div class="user-protocol-title useragreement">用户注册协议</div>
+
+        <div class="user-protocol-content">
+            <pre class="user-protocol pre platform" title="券民公社平台客户服务协议">
+本协议是您与券民公社平台（以下简称“平台”）之间就平台服务等相关事宜所订立的签约，具有合同的法律效力，请您仔细阅读。
+第一条 声明
+（一）平台内在线产品、功能的所有权归上海浦东发展银行股份有限公司所有。
+（二）您在平台进行注册时，一旦勾选协议并提交，即表示为您已自愿接受协议中所有的条款和内容。
+（三）协议条款的效力范围仅限于本平台，您在平台的行为均受协议的约束。
+（四）您访问和/或使用本平台及本平台提供服务，即标识您接受并同意本协议的所有条件和条款，平台运营者依据本协议为您提供服务，不愿意接受本协议条款的，不得访问或使用本平台。
+（五）本平台有权根据需要不定期地制订、修改本协议及/或各类规则，并在平台公示，不再另行单独通知用户。如您不同意，应当立即停止使用平台服务，您继续使用平台服务的，即表明您接受修订后的协议和规则。
+第二条 服务内容
+（一）指平台运用自己的系统，通过互联网络等方式为用户提供商户信息、商品/服务信息、优惠信息、优惠权益转介、团购等网络服务。
+（二）用户必须自行准备如下设备和承担如下开支：
+1、移动上网设备，包括并不限于手机、平板电脑或者其他上网终端、调制解调器及其他上网装置；
+2、上网开支，包括并不限于网络接入费、上网设备租用费、手机流量费等。
+第三条 服务的提供、修改及终止
+（一）用户在接受平台各项服务的同时，在此授权平台可以向其手机、微信、邮箱、通信地址等发送商业信息。用户有权选择不接受平台提供的各类信息服务，并进入平台相关页面进行更改。
+（二）平台保留随时修改或中断服务而不需通知用户的权利。平台有权行使修改或中断服务的权利，不需对用户或任何无直接关系的第三方负责。
+（三）用户对本协议的修改有异议，或对平台的服务不满，可以行使如下权利：
+1、停止使用平台的各项服务；
+2、通过客服等渠道告知平台停止对其服务。结束服务后，用户使用平台服务的权利立即终止。在此情况下，平台没有义务传送任何未处理的信息或未完成的服务给用户或任何无直接关系的第三方。
+第四条 用户注册
+（一）用户须具有法定的相应权利能力和行为能力的自然人、法人或其他组织，能够独立承担法律责任。您完成注册程序或其他平台同意的方式实际使用本平台服务时，即视为您确认自己具备主体资格，能够独立承担法律责任。若因您不具备主体资格，而导致的一切后果，由您及您的监护人自行承担。
+（二）用户应自行诚信向本平台提供注册资料，用户同意其提供的注册资料真实、准确、完整、合法有效，用户注册资料如有变动的，应及时更新其注册资料。如果用户提供的注册资料不合法、不真实、不准确、不详尽的，用户需承担因此引起的相应责任及后果，并且平台运营方保留终止用户使用本平台各项服务的权利。
+（三）您注册成功后，即成为平台的用户，将持有平台唯一编号的用户名和密码等账户信息，您可以根据本站规定修改您的密码。
+（四）您应谨慎合理的保存、使用您的用户名和密码，应对通过您的用户名和密码实施的行为负责。除非有法律规定或司法裁定，且征得平台的同意，否则，用户名和密码不得以任何方式转让、赠与或继承(与账户相关的财产权益除外)。
+（五）用户不得将在本平台注册获得的账户借给他人使用，否则用户应承担由此产生的全部责任，并与实际使用人承担连带责任。
+（六）如果发现任何非法使用等可能危及您的账户安全的情形时，您应当立即以有效方式通知平台，要求平台暂停相关服务，并向公安机关报案。您理解平台对您的请求采取行动需要合理时间，平台对在采取行动前已经产生的后果(包括但不限于您的任何损失)不承担任何责任。
+第五条 用户信息的保密和使用
+（一）本协议所称之用户信息是指符合法律、法规及相关规定，并符合下述范围的信息：
+1、用户在平台注册时，向平台提供的个人信息；
+2、用户在使用平台服务、参加网站活动或访问网站网页时，平台自动接收并记录的用户浏览器端或手机客户端数据，包括但不限于IP地址、网站 Cookie中的资料及用户要求取用的网页记录；
+3、平台从商业伙伴处合法获取的用户个人信息；
+4、其它平台通过合法途径获取的用户个人信息。
+（二）平台承诺对用户的个人信息和隐私的安全承担保密义务。为更好的为平台用户提供平台入驻商户的优惠服务，以及平台关联公司或其他组织的服务(以下称其他服务)，您同意并授权平台将您在注册、使用平台服务过程中提供、形成的信息共享给平台入驻商户、其他服务的平台关联公司或组织，或从平台辖下商户、提供其他服务的平台关联公司或组织获取您在注册、使用商户服务期间提供、形成的信息。如平台与上述商户、关联公司或其他组织分享用户个人信息时，平台将努力确保该等第三方在使用您的个人信息时遵守相关保密和安全措施。
+（三）除上述情形外，未经您同意，平台不会与任何其他第三方分享您授权提供的个人信息。但以下情况除外，且本平台不承担任何责任：
+1、政府单位按照中华人民共和国的法律、行政法规、部门规章、司法解释等规范性法律文件（统称“法律法规”），要求本平台提供的；
+2、由于您将用户和密码告知或泄露给他人，由此导致的个人资料泄露；
+3、包括但不仅限于黑客攻击、计算机病毒侵入或发作、政府管制等不可抗力而造成的用户个人资料泄露、丢失、被盗用或被篡改等；
+4、您通过本平台其他第三方造成的个人资料泄露以及由此导致的任何法律争议和后果；
+5、为免除他人正在遭受威胁到其生命、身体或财产等方面的危险，所采取的措施；
+6、本平台会与其他平台链接，但不对其他网站的隐私政策及内容负责；
+7、此外，您若发现有任何非法使用您的用户账号或安全漏洞的情况，应立即通告本平台；
+第六条 用户权利及义务
+（一）用户一旦注册成功，将得到用户名(手机号)和密码，并对以此组用户名和密码登入系统后所发生的所有活动和事件负责，自行承担一切使用该用户名的言语、行为等而直接或者间接导致的法律责任。
+（二）用户有义务妥善保管平台用户名和密码，用户将对用户名和密码安全负全部责任。因用户原因导致用户名或密码泄露而造成的任何法律后果由用户本人负责。
+（三）用户在平台注册后，将获得平台发放的平台会员卡，用户领取平台辖下商户的优惠券并至商户消费后，将同步获得平台辖下商户的会员卡。用户有权至平台辖下商户进行消费、获得折扣或积分、并根据平台相关规定进行积分兑换等。
+（四）用户有权在平台上自行浏览、下载和使用优惠券；
+（五）用户有权根据平台相关规定，进行平台商户转介以及权益转介相关营销活动，并在成功营销新的会员后，取得平台给予的奖励（如工分/积分等）；
+（六）用户有权根据平台规定，享受平台提供的其他各类服务。
+（七）用户不得利用本平台危害国家安全、泄露国家秘密，不得侵犯国家社会集体的和公民的合法权益，不得利用本平台制作、复制和传播下列信息：
+1、煽动抗拒、破坏宪法和法律、行政法规实施的；
+2、煽动颠覆国家政权，推翻社会主义制度的；
+3、煽动分裂国家、破坏国家统一的；
+4、煽动民族仇恨、民族歧视，破坏民族团结的；
+5、捏造或者歪曲事实，散布谣言，扰乱社会秩序的；
+6、宣扬封建迷信、淫秽、色情、赌博、暴力、凶杀、恐怖、教唆犯罪的；
+7、公然侮辱他人或者捏造事实诽谤他人的，或者进行其他恶意攻击的；
+8、损害国家机关信誉的；
+9、其他违反宪法和法律行政法规的；
+10、进行商业广告行为的。
+（八）用户不得通过任何手段恶意注册平台帐号，包括但不限于以牟利、炒作、套现、获奖等为目的多个账号注册。用户不得将平台以任何形式作为从事各种非法活动的场所、平台或媒介。未经平台的授权或许可，用户不得借用本站的名义从事任何商业活动，也不得以任何形式将本平台作为从事商业活动的场所或媒介。用户亦不得盗用其他用户帐号。如用户违反上述规定，则平台有权直接采取一切必要的措施，包括但不限于删除用户发布的内容，暂停或查封用户帐号，取消因违规所获利益，乃至通过诉讼形式追究用户法律责任等。
+（九）用户不得发布任何侵犯他人著作权、商标权等知识产权或合法权利的内容，不以虚构或歪曲事实的方式不当评价其他会员。
+（十）用户不得对平台上的任何数据作商业性利用，包括但不限于在未经平台事先书面同意的情况下，以复制、传播等任何方式使用平台上展示的资料。不使用任何装置、软件或程序干预平台的正常运营。
+（十一） 经国家行政或司法机关的生效法律文书确认您存在违法或侵权行为，或者平台根据自身的判断，认为您的行为涉嫌违反本协议和/或规则的条款或涉嫌违反法律法规的规定的，则平台有权不经通知您即予以删除，并采取暂停或关闭用户帐号及其他措施。
+（十二）对于您涉嫌违反承诺的行为对任意第三方造成损害的，您均应当以自己的名义独立承担所有的法律责任，并应确保平台免于因此产生损失或增加费用。
+（十三）如您涉嫌违反有关法律或者本协议之规定，使平台遭受任何损失，或受到任何第三方的索赔，或受到任何行政管理部门的处罚，您应当赔偿平台因此造成的损失及(或)发生的费用，包括合理的律师费用。
+第七条 责任范围和责任限制
+（一）本平台作为“网络服务提供者”的第三方平台，不担保网站平台上的信息及服务能充分满足用户的需求。您应谨慎判断确定相关物品及/或信息的真实性、合法性和有效性。除非另有明确的书面说明，本平台不对各平台在本平台上发布的信息、内容、材料、产品和服务及各方在交易中各项义务的履行能力作任何形式的担保，法律法规另有规定的除外。
+（二）本平台在接到您投诉、主管机关通知或按照法律法规规定，有合理的理由认为特定会员及具体交易事项可能存在重大违法或违约情形时,平台可依约定或依法采取相应措施。
+（三）由于法律规定的不可抗力，信息网络正常的设备维护，信息网络连接故障，电脑、通讯或其他系统的故障，电力故障，劳动争议，生产力或生产资料不足，司法行政机关的命令或第三方的不作为及其他本平台无法控制的原因造成的本平台不能服务或延迟服务、丢失数据信息、记录的，本平台不承担责任，但本平台将协助处理相关事宜。
+（四）本平台不对用户所发布信息的保存、修改、删除或储存失败负责。对非平台故意所导致的排字错误、疏忽等不承担责任，本平台有权但无义务，改善或更正平台任何部分之疏漏、错误。
+（五）所有发给用户的通告，平台都将通过正式的页面公告、站内信、电子邮件、客服电话、手机短信或常规的信件送达。任何非经平台正规渠道获得的中奖、优惠等活动或信息，平台不承担法律责任。
+第八条 协议终止
+（一）平台有权自行全权决定以任何理由不经事先通知的中止、终止向您提供部分或全部平台服务，暂时冻结或永久冻结(注销)您的账户，且无须为此向您或任何第三方承担任何责任。
+（二）出现以下情况时，平台有权直接以注销账户的方式终止本协议:
+1、平台终止向您提供服务后，您涉嫌再一次直接或间接或以他人名义注册为平台用户的;
+2、您注册信息中的主要内容不真实或不准确或不及时或不完整。
+3、本协议(含规则)变更时，您明示并通知平台不愿接受新的服务协议的;
+4、其它本平台认为应当终止服务的情况。
+（三）您有权向平台要求注销您的账户，经平台审核同意的，平台注销(永久冻结)您的账户，届时，您与平台基于本协议的合同关系即终止。您的账户被注销(永久冻结)后，本平台没有义务为您保留或向您披露您账户中的任何信息，也没有义务向您或第三方转发任何您未曾阅读或发送过的信息。
+（四）您与本平台的合同关系终止后，平台仍享有下列权利：
+1、继续保存您的注册信息及您使用平台服务期间的所有交易信息；
+2、您在使用平台服务期间存在违法行为或违反本协议和/或规则的行为的，平台仍可依据本协议向您主张权利。
+第九条 知识产权
+本平台所有的域名、商标、文字、视像及声音内容、图形及图像均受有关所有权和知识产权法律的保护，未经本平台事先以书面明确允许，任何个人或单位，均不得进行复制和使用。
+第十条 法律适用、管辖与其他
+（一）协议的生效、履行、解释及争议的解决均适用中华人民共和国法律。
+（二）您使用平台提供的服务如产生争议，原则上双方协商解决，协商不成可向本平台所有人所在的仲裁机构、人民法院进行调解或提起诉讼。
+（三）协议的条款如与法律相抵触，本平台可进行重新解析，而其他条款则保持对您产生法律效力和约束。
+</pre>
+            <pre class="user-protocol pre merchant" title="商户会员服务协议">
+本协议是您与券民公社平台入驻商户之间就商户会员服务等相关事宜所订立的签约，具有合同的法律效力，请您仔细阅读。
+第一条 声明
+（一）您在注册商户会员时，一旦勾选协议并提交，即表示为您已自愿接受协议中所有的条款和内容。
+（二）本商户会员服务系统由券民公社平台提供技术支持，为方便您使用平台提供的服务，您同意并授权本商户将您在注册、使用商户服务过程中提供、形成的信息传递给向您提供服务的券民公社平台，或从券民公社平台获取您在注册、使用其他服务期间提供、形成的信息。
+第二条 服务内容
+指商户通过券民公社平台提供的系统，通过互联网络等方式为用户提供商品/服务信息展示、优惠权益发放、会员注册及身份识别以及在线支付结算等服务。
+第三条  服务协议的修订
+根据国家法律法规变化及商户经营需要，商户有权对本协议条款及相关规则不定期进行修改，修改后的内容一旦以任何形式公布即生效，并取代此前相关内容，您在使用商户会员服务过程中应不时的关注公告、提示信息以及协议、规则等相关内容的变动。如您继续使用商户会员服务，即视为您已知悉变动内容并同意接受，当发生有关争议时，以最新的服务协议为准，如您不同意更新后的内容，应立即停止使用商户会员服务。
+第四条 会员注册
+（一）您应当是须具有法定的相应权利能力和行为能力的自然人、法人或其他组织，能够独立承担法律责任。您完成注册程序时，即视为您确认自己具备主体资格，能够独立承担法律责任。若因您不具备主体资格，而导致的一切后果，由您及您的监护人自行承担。
+（二）您应自行诚信向本商户提供注册资料，并确保提供的注册资料真实、准确、完整、合法有效，注册资料如有变动的，应及时更新其注册资料。如果您提供的注册资料不合法、不真实、不准确、不详尽的，您需承担因此引起的相应责任及后果，并且本商户保留终止您使用本商户各项服务的权利。
+（三）在您按照注册页面提示填写信息、阅读并同意本协议并完成全部注册程序后，您即成为本商户的会员，并将持有本商户唯一的会员编号。
+（四）券民公社平台的用户名和密码是识别您商户会员身份的唯一标识，您应谨慎合理的保存、使用您的用户名和密码，应对通过您的用户名和密码实施的行为负责。您不得将用户名和密码借给他人使用，否则应承担由此产生的全部责任，并与实际使用人承担连带责任。
+第五条 会员权利及义务
+（一）您有义务妥善保管平台用户名和密码，用户将对用户名和密码安全负全部责任。因用户原因导致用户名或密码泄露而造成的任何法律后果由用户本人负责。
+（二）您领取本商户的优惠券并注册成为本商户的会员后，有权至本商户进行消费，按照本商户会员权益或者优惠券获得相应折扣或积分等。
+（三）您有权在券民公社平台上自行浏览、下载和使用本商户的优惠券，并根据平台或本商户相关规定，进行本商户权益转介相关营销活动，并在成功营销新的会员后，取得平台或本商户给予的奖励（如工分/积分等）；
+（四）您不得以不正当方式参与本商户的各项优惠活动，对于任何手段的恶意操作，包括但不限于恶意套现，恶意注册，利用程序漏洞等，本商户有权取消您享受此活动优惠的资格。
+第六条 法律适用、管辖与其他
+（一）协议的生效、履行、解释及争议的解决均适用中华人民共和国法律。
+（二）您使用本商户提供的服务如产生争议，原则上双方协商解决，协商不成可向本商户所有人所在的仲裁机构、人民法院进行调解或提起诉讼。
+（三）协议的条款如与法律相抵触，本商户可进行重新解析，而其他条款则保持对您产生法律效力和约束。
+</pre>
+
+            <pre class="user-protocol pre useragreement" title="网站用户注册协议">
+重要须知:
+黑龙江瑞尔信智慧农业科技有限公司在此特别提醒用户认真阅读、充分理解本《服务协议》（下称《协议》）--- 用户应认真阅读、充分理解本《协议》中各条款，包括免除或者限制黑龙江瑞尔信智慧农业科技有限公司责任的免责条款及对用户的权利限制条款。请您审慎阅读并选择接受或不接受本《协议》（未成年人应在法定监护人陪同下阅读）。除非您接受本《协议》所有条款，否则您无权注册、登录或使用本协议所涉相关服务。您的注册、登录、使用等行为将视为对本《协议》的接受，并同意接受本《协议》各项条款的约束。
+本《协议》是您（下称“用户”）与黑龙江瑞尔信智慧农业科技有限公司（下称“瑞尔信”）之间关于用户注册、登录、使用、浏览“浦惠到家”服务所订立的协议。本《协议》描述瑞尔信与用户之间关于“浦惠到家”服务相关方面的权利义务。“用户”是指注册、登录、使用、浏览本服务的个人或组织。
+本《协议》可由瑞尔信随时更新，更新后的协议条款一旦公布即代替原来的协议条款，恕不再另行通知，用户可在本网站查阅最新版协议条款。在瑞尔信修改《协议》条款后，如果用户不接受修改后的条款，请立即停止使用瑞尔信提供的服务，用户继续使用瑞尔信提供的服务将被视为已接受了修改后的协议。
+一、使用规则
+1、用户充分了解并同意，浦惠到家仅为用户提供社区服务以及周边商城等综合信息的分享、传送及获取，用户必须为自己注册帐号下的一切行为负责，包括您所传送的任何内容以及由此产生的任何结果。用户应对浦惠到家中的内容自行加以判断，并承担因使用内容而引起的所有风险，包括因对内容的正确性、完整性或实用性的依赖而产生的风险。黑龙江瑞尔信智慧农业科技有限公司无法且不会对因用户行为而导致的任何损失或损害承担责任。
+2、用户在浦惠到家服务中或通过浦惠到家服务所传送的任何内容并不反映黑龙江瑞尔信智慧农业科技有限公司的观点或政策，黑龙江瑞尔信智慧农业科技有限公司对此不承担任何责任。
+3、用户充分了解并同意，浦惠到家是一个基于社区服务、周边商城等综合利民服务的整合，用户须对在浦惠到家上的注册信息的真实性、合法性、有效性承担全部责任，用户不得冒充他人；不得利用他人的名义传播任何信息；不得恶意使用注册账号导致其他用户误认；否则黑龙江瑞尔信智慧农业科技有限公司有权立即停止提供服务，收回浦惠到家账号并由用户独自承担由此而产生的一切法律责任。
+4、用户须对在浦惠到家上所传送信息的真实性、合法性、无害性、有效性等全权负责，与用户所传播的信息相关的任何法律责任由用户自行承担，与黑龙江瑞尔信智慧农业科技有限公司无关。
+5、黑龙江瑞尔信智慧农业科技有限公司保留因业务发展需要，单方面对本服务的全部或部分服务内容在任何时候不经任何通知的情况下变更、暂停、限制、终止或撤销浦惠到家服务的权利，用户需承担此风险。
+6、浦惠到家提供的服务中可能包括广告，用户同意在使用过程中显示浦惠到家和第三方供应商、合作伙伴提供的广告。
+7、用户不得利用浦惠到家服务制作、上载、复制、发送如下内容：
+反对宪法所确定的基本原则的；
+危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；
+损害国家荣誉和利益的；
+煽动民族仇恨、民族歧视，破坏民族团结的；
+破坏国家宗教政策，宣扬邪教和封建迷信的；
+散布谣言，扰乱社会秩序，破坏社会稳定的；
+散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；
+侮辱或者诽谤他人，侵害他人合法权益的；
+含有法律、行政法规禁止的其他内容的信息。
+8、瑞尔信可依其合理判断，对违反有关法律法规或本协议约定；或侵犯、妨害、威胁任何人权利或安全的内容，或者假冒他人的行为，瑞尔信有权依法停止传输任何前述内容，并有权依其自行判断对违反本条款的任何人士采取适当的法律行动，包括但不限于，从浦惠到家服务中删除具有违法性、侵权性、不当性等内容，终止违反者的成员资格，阻止其使用浦惠到家全部或部分服务，并且依据法律法规保存有关信息并向有关部门报告等。
+9、用户权利及义务：
+浦惠到家账号的所有权归黑龙江瑞尔信智慧农业科技有限公司所有，用户完成申请注册手续后，获得浦惠到家账号的使用权，该使用权仅属于初始申请注册人，禁止赠与、借用、租用、转让或售卖。黑龙江瑞尔信智慧农业科技有限公司因经营需要，有权回收用户的浦惠到家账号。
+用户有权更改、删除在浦惠到家上的个人资料、注册信息及传送内容等，但需注意，删除有关信息的同时也会删除任何您储存在系统中的文字和图片。用户需承担该风险。
+用户有责任妥善保管注册帐号信息及帐号密码的安全，用户需要对注册帐号以及密码下的行为承担法律责任。用户同意在任何情况下不使用其他成员的帐号或密码。在您怀疑他人在使用您的帐号或密码时，您同意立即通知黑龙江瑞尔信智慧农业科技有限公司。
+用户应遵守本协议的各项条款，正确、适当地使用本服务，如因用户违反本协议中的任何条款，瑞尔信有权依据协议终止对违约用户浦惠到家账号提供服务。同时，黑龙江瑞尔信智慧农业科技有限公司保留在任何时候收回浦惠到家账号、用户名的权利。
+用户注册浦惠到家账号后如果长期不登录该账号，瑞尔信有权回收该账号，以免造成资源浪费，由此带来问题均由用户自行承担。
+二、隐私保护
+用户同意个人隐私信息是指那些能够对用户进行个人辨识或涉及个人通信的信息，包括下列信息：用户真实姓名，身份证号，手机号码，所属社区，单元，IP地址。而非个人隐私信息是指用户对本服务的操作状态以及使用习惯等一些明确且客观反映在黑龙江瑞尔信智慧农业科技有限公司服务器端的基本记录信息和其他一切个人隐私信息范围外的普通信息；以及用户同意公开的上述隐私信息；
+尊重用户个人隐私信息的私有性是黑龙江瑞尔信智慧农业科技有限公司的一贯制度，黑龙江瑞尔信智慧农业科技有限公司将会采取合理的措施保护用户的个人隐私信息，除法律或有法律赋予权限的政府部门要求或用户同意等原因外，黑龙江瑞尔信智慧农业科技有限公司未经用户同意不向除合作单位以外的第三方公开、 透露用户个人隐私信息。 但是，用户在注册时选择同意，或用户与黑龙江瑞尔信智慧农业科技有限公司及合作单位之间就用户个人隐私信息公开或使用另有约定的除外，同时用户应自行承担因此可能产生的任何风险，黑龙江瑞尔信智慧农业科技有限公司对此不予负责。同时，为了运营和改善黑龙江瑞尔信智慧农业科技有限公司的技术和服务，黑龙江瑞尔信智慧农业科技有限公司将可能会自行收集使用或向第三方提供用户的非个人隐私信息，这将有助于黑龙江瑞尔信智慧农业科技有限公司向用户提供更好的用户体验和提高黑龙江瑞尔信智慧农业科技有限公司的服务质量。
+用户同意，在使用浦惠到家服务时也同样受黑龙江瑞尔信智慧农业科技有限公司隐私政策的约束。当您接受本协议条款时，您同样认可并接受黑龙江瑞尔信智慧农业科技有限公司隐私政策的条款。
+三、法律责任及免责
+1、用户违反本《协议》或相关的服务条款的规定，导致或产生的任何第三方主张的任何索赔、要求或损失，包括合理的律师费，用户同意赔偿黑龙江瑞尔信智慧农业科技有限公司与合作公司、关联公司，并使之免受损害。
+2、用户因第三方如电信部门的通讯线路故障、技术问题、网络、电脑故障、系统不稳定性及其他各种不可抗力原因而遭受的一切损失，黑龙江瑞尔信智慧农业科技有限公司及合作单位不承担责任。
+3、因技术故障等不可抗事件影响到服务的正常运行的，黑龙江瑞尔信智慧农业科技有限公司及合作单位承诺在第一时间内与相关单位配合，及时处理进行修复，但用户因此而遭受的一切损失，黑龙江瑞尔信智慧农业科技有限公司及合作单位不承担责任。
+4、本服务同大多数互联网服务一样，受包括但不限于用户原因、网络服务质量、社会环境等因素的差异影响，可能受到各种安全问题的侵扰，如他人利用用户的资料，造成现实生活中的骚扰；用户下载安装的其它软件或访问的其他网站中含有“特洛伊木马”等病毒，威胁到用户的计算机信息和数据的安全，继而影响本服务的正常使用等等。用户应加强信息安全及使用者资料的保护意识，要注意加强密码保护，以免遭致损失和骚扰。
+5、用户须明白，使用本服务因涉及Internet服务，可能会受到各个环节不稳定因素的影响。因此，本服务存在因不可抗力、计算机病毒或黑客攻击、系统不稳定、用户所在位置、用户关机以及其他任何技术、互联网络、通信线路原因等造成的服务中断或不能满足用户要求的风险。用户须承担以上风险，黑龙江瑞尔信智慧农业科技有限公司不作担保。对因此导致用户不能发送和接受阅读信息、或接发错信息，黑龙江瑞尔信智慧农业科技有限公司不承担任何责任。
+6、用户须明白，在使用本服务过程中存在有来自任何他人的包括威胁性的、诽谤性的、令人反感的或非法的内容或行为或对他人权利的侵犯（包括知识产权）的匿名或冒名的信息的风险，用户须承担以上风险，黑龙江瑞尔信智慧农业科技有限公司和合作公司对本服务不作任何类型的担保，不论是明确的或隐含的，包括所有有关信息真实性、适商性、适于某一特定用途、所有权和非侵权性的默示担保和条件，对因此导致任何因用户不正当或非法使用服务产生的直接、间接、偶然、特殊及后续的损害，不承担任何责任。
+7、黑龙江瑞尔信智慧农业科技有限公司定义的信息内容包括：文字、软件、声音、相片、录像、图表；在广告中全部内容；黑龙江瑞尔信智慧农业科技有限公司为用户提供的商业信息，所有这些内容受版权、商标权、和其它知识产权和所有权法律的保护。所以，用户只能在黑龙江瑞尔信智慧农业科技有限公司和广告商授权下才能使用这些内容，而不能擅自复制、修改、编纂这些内容、或创造与内容有关的衍生产品。
+8、在任何情况下，黑龙江瑞尔信智慧农业科技有限公司均不对任何间接性、后果性、惩罚性、偶然性、特殊性或刑罚性的损害，包括因用户使用浦惠到家服务而遭受的利润损失，承担责任（即使浦惠到家已被告知该等损失的可能性亦然）。尽管本协议中可能含有相悖的规定，黑龙江瑞尔信智慧农业科技有限公司对您承担的全部责任，无论因何原因或何种行为方式，始终不超过您在成员期内因使用浦惠到家服务而支付给黑龙江瑞尔信智慧农业科技有限公司的费用(如有) 。
+四、浦惠到家社区管理规则
+浦惠到家是和现实相关的社区类产品，希望用户相互尊重，遵循和现实社会一样的社交礼仪。
+为避免遭到用户举报而被封禁设备，请您遵守以下原则：
+请勿发送涉嫌性骚扰的文字、图片及语音信息；
+请勿使用含色情、淫秽意味或其他令人不适的头像或资料；
+请勿在交谈中使用辱骂、恐吓、威胁等言论；
+请勿发布各类垃圾广告、恶意信息、诱骗信息；
+请勿盗用他人头像或资料，请勿伪装他人身份；
+请勿发布不当政治言论或者任何违反国家法规政策的言论。
+如用户违反社区管理规则，黑龙江瑞尔信智慧农业科技有限公司有权依据协议终止对违约用户浦惠到家账号提供服务。同时，黑龙江瑞尔信智慧农业科技有限公司保留在任何时候收回浦惠到家账号的权力。
+五、其他条款
+1、黑龙江瑞尔信智慧农业科技有限公司郑重提醒用户注意本《协议》中免除黑龙江瑞尔信智慧农业科技有限公司责任和加重用户义务的条款，请用户仔细阅读，自主考虑风险。未成年人应在法定监护人的陪同下阅读本《协议》。以上各项条款内容的最终解释权及修改权归黑龙江瑞尔信智慧农业科技有限公司所有。
+2、本《协议》所定的任何条款的部分或全部无效者，不影响其它条款的效力。
+3、本《协议》签订地为哈尔滨。本《协议》的解释、效力及纠纷的解决，适用于中华人民共和国法律。若用户和黑龙江瑞尔信智慧农业科技有限公司之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，用户在此完全同意将纠纷或争议提交黑龙江瑞尔信智慧农业科技有限公司住所地地即哈尔滨市有管辖权的人民法院管辖。
+4、本《协议》的版权由黑龙江瑞尔信智慧农业科技有限公司所有，黑龙江瑞尔信智慧农业科技有限公司保留一切解释和修改权利。
+
+</pre>
+            <div class="user-protocol div platform"></div>
+            <div class="user-protocol div merchant"></div>
+            <div class="user-protocol div useragreement"></div>
+        </div>
+        <div class="user-protocol-footer">
+            <button class="user-protocol-btn">关闭</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        function formatProtocolHtml(type) {
+            if(type!=='useragreement'){
+              if (type !== "merchant" ) {
+                 type = "platform";
+              }
+            }
+            var protocolList = $(".user-protocol.pre." + type).text().split("\n");
+            var protocolHtml = "";
+            for (var i = 0; i < protocolList.length; i++) {
+                var protocolLine = protocolList[i].replace(/^\s+|\s+$/g, "");
+                if(globalVariable.pageType==='phdj_custom'){
+                    if(protocolLine==='重要须知:' || protocolLine==='一、使用规则' ||
+                    protocolLine==='二、隐私保护' || protocolLine==='三、法律责任及免责' ||
+                    protocolLine==='四、浦惠到家社区管理规则' || protocolLine==='五、其他条款'){
+                    protocolHtml += "<br\/><div><b>" + protocolLine + "<\/b><\/div><br\/>";
+                    }else{
+                    protocolHtml += "<div>" + protocolLine + "<\/div><br\/>";
+                    }
+                }else{
+                  if (/^第\S+条/.test(protocolLine)) {
+                    protocolHtml += "<br\/><div><b>" + protocolLine + "<\/b><\/div>";
+                  } else if (/\S+/.test(protocolLine)) {
+                    protocolHtml += "<div>" + protocolLine + "<\/div>";
+                  }
+                }
+            }
+            $(".user-protocol.div." + type).html(protocolHtml);
+        }
+        formatProtocolHtml("platform");
+        formatProtocolHtml("merchant");
+        formatProtocolHtml("useragreement")
+        var note1 = "我已阅读并同意&nbsp;";
+        var protocolMerchant = "<span class=\"user-protocol-note merchant\">商户会员注册协议<\/span>";
+        var protocolPlatform = "<span class=\"user-protocol-note platform\">用户注册协议<\/span>";
+        var protocoluseragreement = "<span class=\"user-protocol-note useragreement\">网站用户注册协议<\/span>";
+
+        var note2 = "<div style=\"margin-top:.2em;\">及&nbsp;" + protocolPlatform + "<\/div>";
+        if(globalVariable.pageType==='phdj_custom'){
+            $("#formFieldProtocal1").each(function(){
+                $(this).addClass("user-protocol-note useragreement").text("用户注册协议").attr("id","");
+            });
+        }
+        else if (!globalVariable.isNormalMerchant) {
+            // 非普通商户 显示用户注册协议
+            $("#formFieldProtocal1").each(function(){
+                $(this).addClass("user-protocol-note platform").text("用户注册协议").attr("id","");
+            });
+        }else if (globalVariable.isPlatformMember) {
+            $("#formFieldProtocal2").each(function(){
+                $(this).addClass("user-protocol-note merchant").text("商户会员注册协议").attr("id","");
+            });
+        } else {
+            $("#formFieldProtocal1").each(function(){
+                var thisDom=$(this).attr("id","");
+                var checkboxDom = thisDom.parent();
+                var divDom = $("<div>").append("及&nbsp;").css("text-align","center");
+                divDom.append( thisDom.clone().addClass("user-protocol-note platform").text("用户注册协议") ).appendTo(checkboxDom);
+                thisDom.addClass("user-protocol-note merchant").text("商户会员注册协议");
+            });
+        }
+        $(".user-protocol-mask").hide();
+        $("form").on("click", ".user-protocol-note", function () {
+            if(!$(this).hasClass("useragreement")){
+              if ($(this).hasClass("merchant")) {
+                $(".user-protocol-mask").addClass("merchant").removeClass("platform").fadeIn();
+               } else {
+                $(".user-protocol-mask").removeClass("merchant").addClass("platform").fadeIn();
+               }
+               $(".user-protocol-mask .useragreement").css('display','none');
+            }else{
+                $(".user-protocol-mask").fadeIn();
+                $(".user-protocol-mask .merchant").css('display','none');
+                $(".user-protocol-mask .platform").css('display','none');
+                // $(".user-protocol-mask .useragreement").css('display','block');
+            }
+            $("body").css("overflow-y", "hidden");
+            $(".user-protocol-content").scrollTop(0);
+        });
+        $(".user-protocol-btn").on("click", function () {
+            $("body").css("overflow-y", "auto");
+            $(".user-protocol-mask").fadeOut();
+        });
+    });
+</script>
+
+<style>
+    .mask-style {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Lantinghei SC", "Microsoft Sans Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.6);
+        font-size: 14px;
+        line-height: 22px;
+        color: #666;
+        z-index: 6000;
+    }
+    .wrap-style {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        padding: 15px 25px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;
+        max-height: 85vh;
+        width: 80vw;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-shadow: #666 0 0 60px;
+        box-shadow: #666 0 0 60px;
+    }
+    .verify-wrap .verify-title, .apply-success-message {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        padding-bottom: 10px;
+    }
+    .verify-wrap .verify-content {
+        max-height: 70vh;
+        overflow-y: auto;
+    }
+    .verify-wrap .input-line {
+        margin: 10px 0 20px;
+    }
+    .verify-wrap .error {
+        color: #f56c6c;
+        font-size: 0.8em;
+        text-align: center;
+    }
+    .verify-submit {
+        text-align: center;
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -moz-box-flex: 0;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+    }
+    .verify-wrap span {
+        display: none;
+    }
+    .wrap-style input {
+        border-radius: 2px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+        height: 34px;
+        line-height: 1.5;
+        width: 100%;
+        font-size: 1em;
+        color: #444;
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        outline: none;
+        padding: 10px 5px 10px 10px;
+    }
+    .wrap-style input:focus {
+        border-color: #0fc3fe;
+    }
+    .verify-submit button, .apply-success-btn {
+        width: 60%;
+        background-color: #2eb2ed;
+        height: 34px;
+        color: #fff;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 17px;
+        -webkit-appearance: none;
+        text-align: center;
+        line-height: 34px;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 0;
+    }
+    .verify-description {
+        color: #777;
+        font-size: 13px;
+    }
+    .mr-12 {
+        margin-right: 12px;
+    }
+
+    .replace-title {
+        text-align: center;
+        padding-bottom: 12px;
+    }
+    .replace-coupon-btn {
+        background-color: #2eb2ed;
+        height: 30px;
+        color: #fff;
+        border: none;
+        border-radius: 14px;
+        -webkit-appearance: none;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 0 16px;
+    }
+    .replace-coupon-cancel-btn {
+        background-color: #fff;
+        height: 30px;
+        color: rgba(0, 0, 0, 0.65);
+        border: 1px solid #d9d9d9;
+        border-radius: 14px;
+        -webkit-appearance: none;
+        text-align: center;
+        line-height: 30px;
+        margin: 0 auto;
+        cursor: pointer;
+        padding: 0 16px;
+    }
+    .replace-actions {
+        display: flex;
+        margin-top: 24px;
+    }
+    .replace-coupon input {
+        width: 70%;
+    }
+    .replace-coupon .wrap-style {
+        top: 33%;
+    }
+
+</style>
+
+<div class="mask-style verify-mask">
+    <label class="input-line" style="display:none;">
+        <span>文字</span>
+        <input type="text" name="text" />
+        <div class="error"></div>
+    </label>
+    <form class="wrap-style verify-wrap">
+        <div class="verify-description"></div>
+        <div class="verify-title">身份校验</div>
+        <div class="verify-content"></div>
+        <div class="verify-submit">
+            <button type="submit">提交校验</button>
+        </div>
+    </form>
+</div>
+<div class="mask-style apply-success-url-mask">
+    <div class="wrap-style">
+        <div class="apply-success-message">您已提交表单</div>
+        <div id="appliedJumpUrl" type="button" class="apply-success-btn">下一步</div>
+    </div>
+</div>
+<div class="mask-style apply-success-mask">
+    <div class="wrap-style">
+        <div class="apply-success-message">您已提交表单, 请关闭本页面</div>
+    </div>
+</div>
+<div class="mask-style apply-success-coupon-mask">
+    <div class="wrap-style">
+        <div class="apply-success-message">您已提交表单</div>
+        <div id="getAppliedCardBtn" class="apply-success-btn">领取优惠券</div>
+    </div>
+</div>
+<div class="mask-style replace-coupon">
+    <div class="wrap-style">
+        <div class="replace-title">请输入被领取人手机号</div>
+        <div class="input-line">
+            <span>手机号</span>
+            <input type="tel" name="mobile" />
+        </div>
+        <div class="replace-actions">
+            <div class="replace-coupon-cancel-btn mr-12">取消</div>
+            <div class="replace-coupon-btn">领取优惠券</div>
+        </div>
+    </div>
+</div>
+
+<div class="js_dialog wx_openModal" style="opacity:1;display:none">
+    <div class="weui-mask"></div>
+    <div class="weui-dialog" style="text-align: left;">
+      <div class="weui-dialog__bd" style="padding:0px;margin-bottom:0px;display: block;"></div>
+      <div class="weui-dialog__ft" style="display:block">
+        <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" style="text-align: center;">关闭</a>
+      </div>
+    </div>
+</div>
